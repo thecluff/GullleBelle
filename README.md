@@ -1,6 +1,18 @@
 # Gull le Belle
 
-A fake banking website for scambaiting
+A fake banking website for scambaiting copied as close to Kitboga's , "Gull and Bull", as possible.
+
+## Features
+* Fake bank account sign up
+* Transfer between accounts
+* Disable inspect on account information page (still accessible through other pages)
+* Session inactivity timeout (15 minutes)
+* Coo!
+
+## Features to add
+* Recent activities
+* Transfer balance to other users
+* Any other features I can think of
 
 ## How to use
 ### This instruction is for windows users, although the steps are mostly the same.
@@ -54,3 +66,6 @@ CREATE TABLE `users` (
 ````
 14. Start Apache in the XAMPP control panel.
 15. Go to [www.gulllebelle.com](www.gulllebelle.com) and you're done!
+
+## Disclaimer
+Do not publish this! Not because I don't want to, but you might get in trouble for starting a fake bank website.
