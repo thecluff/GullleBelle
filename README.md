@@ -27,7 +27,6 @@ CREATE TABLE `users` (
 )
 ```
 9. Click go.
-### Windows
 10. Go to `C:\Windows\System32\drivers\etc` and open `hosts` with notepad.
 11. Add this text to the end of it and save. 
 ```
