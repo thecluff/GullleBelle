@@ -5,7 +5,7 @@ A fake banking website for scambaiting copied as close to Kitboga's , "Gull and 
 ## Features
 * Fake bank account sign up
 * Transfer between accounts
-* Disable inspect on account information page (still accessible through other pages)
+* Disabled inspect on account information page (still accessible through other pages)
 * Session inactivity timeout (15 minutes)
 * Coo!
 
