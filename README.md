@@ -45,8 +45,8 @@ CREATE TABLE `users` (
 127.0.0.1       www.gulllebelle.com
 127.0.0.1       gulllebelle.com
 ```
-12. Go to (Replace `(Your Xampp folder)` with your Xampp folder). `(Your Xampp folder)\apache\conf\extra` and open `httpd-vhosts.conf`.
-13. Add this text to the end of it and save (Replace `(Your Xampp folder)` with your Xampp folder).
+12. Go to `(Your Xampp folder)\apache\conf\extra` and open `httpd-vhosts.conf`  (Replace `(Your Xampp folder)` with your Xampp folder)..
+13. Add this text to the end of it and save.
 ````
 <VirtualHost *:80>
     ServerAdmin webmaster@gulllebelle
@@ -63,7 +63,8 @@ CREATE TABLE `users` (
     ErrorLog "logs/dummy-host2.example.com-error.log"
     CustomLog "logs/dummy-host2.example.com-access.log" common
 </VirtualHost>
-````
+````  
+(Replace `(Your Xampp folder)` with your Xampp folder).
 14. Start Apache in the XAMPP control panel.
 15. Go to [www.gulllebelle.com](www.gulllebelle.com) and you're done!
 
