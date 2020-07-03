@@ -1,0 +1,518 @@
+body {
+    background: url(../mp4/production%20ID_3771136.mp4);
+    background-size: cover;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 50px 80px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    z-index: 3;
+    position: absolute;
+    right: 12.5%;
+    top: 150px;
+}
+
+.modal-content h1 {
+    color: #202020;
+    font-family: 'Cormorant', serif;
+}
+
+.modal-content form {
+    display: inline-block;
+}
+
+.modal-content form label {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+    color: #202020;
+}
+
+.modal-content form input {
+    display: block;
+    margin-bottom: 1em;
+    padding: 7px 6px;
+    border: 1px solid #eee;
+    background: #eee;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.modal-content form button {
+    display: inline;
+    margin-top: 20px;
+    padding: 4px;
+    border: 1px solid #202020;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #fff;
+}
+
+#log-in {
+    background: #0055ff;
+    color: #fff;
+    border: 1px solid #0055ff;
+    width: 35%;
+}
+
+#join {
+    background: #199101;
+    color: #fff;
+    border: 1px solid #199101;
+    width: 55%;
+}
+
+#join:hover, #log-in:hover {
+    background: #202020;
+    border: 1px solid #202020;
+    color: #fff;
+}
+
+.reveal {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    text-align: right;
+    margin-top: -37.5px;
+    margin-left: 93%;
+    width: 20px;
+}
+
+.nb {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 4;
+}
+
+.nb_top_logo {
+    background: #402285;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.nb_top_logo img {
+    vertical-align: middle;
+    margin-left: 12.5%;
+}
+
+.logout-button {
+    position: fixed;
+    right: 40px;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.logout-button:hover {
+    color: #eee;
+}
+
+.nb_top_logo h1 {
+    display: inline;
+    font-size: 25px;
+    font-family: 'Cormorant', serif;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.bank-text {
+    font-size: 15px;
+    color: #fefefe;
+}
+
+.list {
+    left: 0;
+    background: rgb(59,59,59);
+    background: linear-gradient(0deg, rgba(59,59,59,1) 0%, rgba(13,13,13,1) 29%, rgba(80,80,80,1) 100%);
+    border-top: 1px solid rgb(42,42,42);
+}
+
+.list ul {
+    display: flex;
+    margin-top: 0px;
+    margin-left: calc(12.5% - 40px);
+}
+
+.list ul li {
+    padding: 7.5px 10px;
+    margin: 0px 0px;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.3s ease;
+}
+
+.list ul li:hover {
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 31%, rgba(195,195,195,1) 100%);
+}
+
+.list ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.list ul li:hover a {
+    color: #202020;
+}
+
+.welcome {
+    margin-top: 15em;
+    z-index: 1;
+}
+
+.welcome h1 {
+    display: inline-block;
+    color: #fff;
+    font-size: 45px;
+    font-family: 'Cormorant', serif;
+    margin-left: 12.5%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    padding: 5px 10px;
+}
+
+.le {
+    font-family: 'Dancing Script', cursive;
+}
+
+.welcome p {
+    color: #eee;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+
+section {
+    position: relative;
+    background: #fff;
+    left: -8px;
+    margin: 0;
+    top: 6em;
+    width: 102%;
+    color: #202020;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about, .other-info {
+    background: #eee;
+    color: #202020;
+}
+
+.about-content, .other-content {
+    text-align: justify!important;
+    margin-right: 20% !important;
+}
+
+.about-content p, .other-content p{
+    text-indent: 50px;
+}
+
+section .content {
+    padding-left: 12.5%;
+    padding-top: 8em;
+    padding-right: 12.5%;
+    padding-bottom: 8em;
+    margin: 0;
+    text-align: center;
+}
+
+.prices {
+    display: inline-block;
+    margin: 100px;
+    margin-top: 50px;
+}
+
+.banks {
+    display: inline-block;
+    padding-bottom: 2em;
+    margin: 100px;
+    margin-top: 50px;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-content {
+    display: inline-block;
+}
+
+.footer-content p {
+    color: rgba(0,0,0,0.50);
+    padding: 2px 0px 2px 0;
+}
+
+.signup-div {
+    margin-left: 50%;
+    width: 400px;
+    transform: translateX(-200px);
+}
+
+.signupform {
+    position: fixed;
+    top: 100px;
+}
+
+.signupform h1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.signupform .reveal {
+    position: relative;
+    top: -54px;
+    margin-left: 89%;
+}
+
+.signupform input {
+    display: block;
+    width: 300px;
+    height: 26px;
+    border: 1px solid #eee;
+    margin: 10px;
+    background: #eee;
+    border-radius: 8px;
+    padding: 7px 6px;
+}
+
+.signupform button {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #202020;
+    margin: 20px;
+    padding: 5px;
+}
+
+/*user-info*/
+.user-info {
+    position: absolute;
+    margin-top: 7em;
+    width: 100%;
+    left: 0;
+    text-align: center;
+}
+
+.userdis {
+    display: inline-block;
+    width: 74%;
+}
+
+.user-info h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #202020;
+    text-align: left;
+}
+
+.user-info table {
+    border-spacing: 0px;
+}
+
+.user-info tr {
+    background: #eee;
+}
+
+.user-info th {
+    font-family: 'Roboto', sans-serif;
+    color: #202020;
+    text-align: left;
+    padding: 10px;
+}
+
+.user-info td {
+    font-family: 'Roboto', sans-serif;
+    color: #202020;
+    text-align: left;
+    padding: 10px;
+}
+
+.checker {
+    background: #d1d1d1 !important;
+}
+
+.positive p {
+    color: white;
+    display: inline;
+    background: green;
+    padding: 2px 5px;
+    border-radius: 8px;
+}
+
+.negative p {
+    color: white;
+    display: inline;
+    background: red;
+    padding: 2px 5px;
+    border-radius: 8px;
+}
+
+.load {
+    color: #0000EE;
+    text-decoration: underline;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    text-align: left;
+}
+
+#transfer-form {
+    position: absolute;
+    top: 10em;
+}
+
+.transer-text {
+    display: inline-block;
+}
+
+.transferform {
+    position: fixed;
+    top: 100px;
+    width: 100%;
+}
+
+.transferform h3 {
+    text-align: left;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+}
+
+.transferform h3 select {
+    display: block;
+    appearance:none;
+    width: 15em;
+    padding: 10px 5px;
+    border: none;
+    background: #eee;
+    border-radius: 8px;
+    margin: 10px 5px 0px 5px;
+}
+
+.transfer-div {
+    width: 100%;
+    text-align: center;
+}
+
+.transferform input {
+    display: block;
+    background: #eee;
+    width: 15em;
+    height: 1.25em;
+    padding: 10px 5px;
+    border: none;
+    background: #eee;
+    border-radius: 8px;
+    margin: 10px 5px 0px 5px;
+}
+
+.transferform button {
+    display: inline-block;
+    background-color: #402285;
+    border: none;
+    padding: 10px 12.5px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s ease;
+    width: 25em;
+}
+
+.transferform button:hover {
+    background-color: #eee;
+    color: #202020;
+}
+
+.ins-funds {
+    color: firebrick;
+    font-family: 'Roboto', sans-serif;
+}
+
+.signupform p {
+    margin-left: 12px;
+}
+
+.expire {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #00000080;
+    z-index: 9;
+    top: 0;
+    left: 0;
+}
+
+.expire h1 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-100%);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.expire button {
+    display: block;
+    text-align: center;
+    margin: 10px auto auto auto;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer
+}
