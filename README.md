@@ -29,9 +29,11 @@ CREATE TABLE `users` (
 9. Click go.
 ### Windows
 10. Go to `C:\Windows\System32\drivers\etc` and open `hosts` with notepad.
-11. Add this text to the end of it and save. `
+11. Add this text to the end of it and save. 
+```
 127.0.0.1       www.gulllebelle.com
-127.0.0.1       gulllebelle.com`
+127.0.0.1       gulllebelle.com
+```
 12. Go to `'Your Xampp folder'\apache\conf\extra` and open `httpd-vhosts.conf`.
 13. Add this text to the end of it and save. 
 ````
