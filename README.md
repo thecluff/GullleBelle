@@ -45,7 +45,7 @@ CREATE TABLE `users` (
 127.0.0.1       www.gulllebelle.com
 127.0.0.1       gulllebelle.com
 ```
-12. Go to `(Your Xampp folder)\apache\conf\extra` and open `httpd-vhosts.conf`  (Replace `(Your Xampp folder)` with your Xampp folder)..
+12. Go to `(Your Xampp folder)\apache\conf\extra` and open `httpd-vhosts.conf`  (Replace `(Your Xampp folder)` with your Xampp folder).
 13. Add this text to the end of it and save.
 ````
 <VirtualHost *:80>
