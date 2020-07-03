@@ -69,5 +69,5 @@ CREATE TABLE `users` (
 14. Start Apache in the XAMPP control panel.
 15. Go to [www.gulllebelle.com](www.gulllebelle.com) and you're done!
 
-## Disclaimer
+## Warning!!
 Do not publish this! Not because I don't want to, but you might get in trouble for starting a fake bank website.
