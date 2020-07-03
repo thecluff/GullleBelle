@@ -26,16 +26,16 @@ A fake banking website for scambaiting copied as close to Kitboga's , "Gull and 
 8. After the database is created, go to the SQL tab and copy this into the text area.
 ```
 CREATE TABLE `users` (
-  'idUsers' int(11) AUTO_INCREMENT KEY NOT NULL,
-  'uidUsers' tinytext NOT NULL,
-  'emailUsers' tinytext NOT NULL,
-  'pwdUsers' longtext NOT NULL,
-  'chckAcc' decimal(18,2) DEFAULT NULL,
-  'savAcc' decimal(18,2) DEFAULT NULL,
-  'credits' decimal(18,2) DEFAULT NULL,
-  'chckNum' tinytext NOT NULL,
-  'savNum' tinytext NOT NULL,
-  'credNum' tinytext NOT NULL
+  `idUsers` int(11) AUTO_INCREMENT KEY NOT NULL,
+  `uidUsers` tinytext NOT NULL,
+  `emailUsers` tinytext NOT NULL,
+  `pwdUsers` longtext NOT NULL,
+  `chckAcc` decimal(18,2) DEFAULT NULL,
+  `savAcc` decimal(18,2) DEFAULT NULL,
+  `credits` decimal(18,2) DEFAULT NULL,
+  `chckNum` tinytext NOT NULL,
+  `savNum` tinytext NOT NULL,
+  `credNum` tinytext NOT NULL
 )
 ```
 9. Click go.
