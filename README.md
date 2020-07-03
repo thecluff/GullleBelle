@@ -7,7 +7,8 @@ A fake banking website for scambaiting
 2. Download [GullleBelle-master.zip](https://github.com/lahrence/GullleBelle/archive/master.zip)
 3. Unzip the file and drag the folder to `C:\xampp\htdocs` (or wherever the htdocs folder is)
 4. In the XAMPP control panel, start 'MySQL'
-5. ```CREATE TABLE `users` (
+5. Go to [phpmyadmin](http://localhost/phpmyadmin/)
+7. ```CREATE TABLE `users` (
   'idUsers' int(11) AUTO_INCREMENT KEY NOT NULL,
   'uidUsers' tinytext NOT NULL,
   'emailUsers' tinytext NOT NULL,
