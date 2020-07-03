@@ -67,7 +67,7 @@ CREATE TABLE `users` (
 (Replace `(Your Xampp folder)` with your Xampp folder).
 
 14. Start Apache in the XAMPP control panel.
-15. Go to [www.gulllebelle.com](www.gulllebelle.com) and you're done!
+15. Go to www.gulllebelle.com(this link only works on your computer) and you're done!
 
 ## Warning!!
 Do not publish this! Not because I don't want you to, but you might get in trouble for starting a fake bank website.
