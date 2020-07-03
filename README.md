@@ -2,10 +2,8 @@
 
 A fake banking website for scambaiting
 
-Click [here](https://github.com/lahrence/GullleBelle/archive/master.zip) to install.
-
 ## How to use
 1. Install [XAMPP](https://www.apachefriends.org/index.html)
-2. 
+2. Download [GullleBelle.zip](https://github.com/lahrence/GullleBelle/archive/master.zip)
 3. 
 4. 
