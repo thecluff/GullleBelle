@@ -74,13 +74,8 @@
                 <div class="banks"><h2>Tetris Depot</h2><img src="/assets/png/TDLogo.png" height="100px"></div>
             </div>
         </section>
-        <footer class="footer">
-            <div class="footer-content">
-                <p>© Gull le Belle 
-                    <?php
-                        echo date('Y');
-                    ?> Coo!</p>
-            </div>
-        </footer>
+        <?php
+            require 'footer.php';
+        ?>
     </body>
 </html>
