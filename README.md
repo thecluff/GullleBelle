@@ -65,6 +65,7 @@ CREATE TABLE `users` (
 </VirtualHost>
 ````  
 (Replace `(Your Xampp folder)` with your Xampp folder).
+
 14. Start Apache in the XAMPP control panel.
 15. Go to [www.gulllebelle.com](www.gulllebelle.com) and you're done!
 
