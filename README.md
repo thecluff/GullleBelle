@@ -11,7 +11,8 @@ A fake banking website for scambaiting
 5. In the XAMPP control panel, start 'MySQL'.
 6. Go to [phpmyadmin](http://localhost/phpmyadmin/) (this link will only work if you have MySQL started).
 7. Create a new database called 'gulllebelle'.
-8. After the database is created, go to the SQL tab and copy this into the text area.```CREATE TABLE `users` (
+8. After the database is created, go to the SQL tab and copy this into the text area.
+```CREATE TABLE `users` (
   'idUsers' int(11) AUTO_INCREMENT KEY NOT NULL,
   'uidUsers' tinytext NOT NULL,
   'emailUsers' tinytext NOT NULL,
@@ -30,8 +31,8 @@ A fake banking website for scambaiting
 127.0.0.1       www.gulllebelle.com
 127.0.0.1       gulllebelle.com`
 12. Go to `'Your Xampp folder'\apache\conf\extra` and open `httpd-vhosts.conf`.
-13. Add this text to the end of it and save.
-```<VirtualHost *:80>
+13. Add this text to the end of it and save. 
+````<VirtualHost *:80>
     ServerAdmin webmaster@gulllebelle
     DocumentRoot "'Your Xampp folder'/htdocs/gulllebelle"
     ServerName www.gulllebelle.com
@@ -45,6 +46,6 @@ A fake banking website for scambaiting
     ServerName gulllebelle.com
     ErrorLog "logs/dummy-host2.example.com-error.log"
     CustomLog "logs/dummy-host2.example.com-access.log" common
-</VirtualHost>```
+</VirtualHost>````
 14. Start Apache in the XAMPP control panel.
 15. Go to [www.gulllebelle.com](www.gulllebelle.com) and you're done!
