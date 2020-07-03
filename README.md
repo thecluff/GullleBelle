@@ -21,5 +21,5 @@ A fake banking website for scambaiting
   'chckNum' tinytext NOT NULL,
   'savNum' tinytext NOT NULL,
   'credNum' tinytext NOT NULL
-)``` Click go.
-9. 
+)```
+9. Click go.
