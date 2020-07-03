@@ -6,7 +6,7 @@ A fake banking website for scambaiting
 ### This instruction is for windows users, although the steps are mostly the same.
 1. Install [XAMPP](https://www.apachefriends.org/index.html).
 2. Download [GullleBelle-master.zip](https://github.com/lahrence/GullleBelle/archive/master.zip).
-3. Go to `C:\xampp\htdocs` (or wherever the htdocs folder is) and delete all the files/folders.
+3. Go to `C:\xampp\htdocs` (or wherever your htdocs folder is) and delete all the files/folders.
 4. Unzip the `GullleBelle-master.zip` and drag the folder into the folder.
 5. In the XAMPP control panel, start 'MySQL'.
 6. Go to [phpmyadmin](http://localhost/phpmyadmin/) (this link will only work if you have MySQL started).
