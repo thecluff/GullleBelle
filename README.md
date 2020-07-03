@@ -2,10 +2,10 @@
 
 A fake banking website for scambaiting
 
+Click [here](https://github.com/lahrence/GullleBelle/archive/master.zip) to install.
 
 ## How to use
-* 1
-* 2
-* 3
-* 4
-[Test](https://www.google.com)
+1. 
+2. 
+3. 
+4. 
