@@ -20,7 +20,7 @@ A fake banking website for scambaiting copied as close to Kitboga's , "Gull and 
 2. Download [GullleBelle-master.zip](https://github.com/lahrence/GullleBelle/archive/master.zip).
 3. Go to `C:\xampp\htdocs` (or wherever your htdocs folder is) and delete all the files/folders.
 4. Unzip the `GullleBelle-master.zip` and drag the folder into the htdocs folder.
-5. In the XAMPP control panel, start 'MySQL'.
+5. In the XAMPP control panel, start 'MySQL' and 'Apache'.
 6. Go to [phpmyadmin](http://localhost/phpmyadmin/) (this link will only work if you have MySQL started).
 7. Create a new database called 'gulllebelle'.
 8. After the database is created, go to the SQL tab and copy this into the text area.
@@ -66,7 +66,7 @@ CREATE TABLE `users` (
 ````  
 (Replace `(Your Xampp folder)` with your Xampp folder).
 
-14. Start Apache in the XAMPP control panel.
+14. Retart 'MySQL' and 'Apache' in the XAMPP control panel.
 15. Go to www.gulllebelle.com (this link only works on your computer) and you're done!
 
 ## Warning!!
