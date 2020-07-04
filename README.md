@@ -3,7 +3,7 @@
 A fake banking website for scambaiting copied as close to Kitboga's , "Gull and Bull", as possible.
 
 ## Disclaimer
-Please only use this for scambaiting or personal means that do not hurt anyone. Do not publish this anywhere, keep it on your computer or VM only.
+Please only use this for scambaiting or personal means that do not hurt anyone. Do not publish this anywhere, keep it on your computer or VM only. The government knows each and everything.
 
 ## Features
 * Fake bank account sign up
