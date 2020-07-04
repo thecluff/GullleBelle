@@ -77,7 +77,7 @@ CREATE TABLE `users` (
 1. Open command prompt on the host computer.
 2. Run `ipconfig` and get your local IPv4 address.
 3. On the client computer open the host file from their computer (`C:\Windows\System32\drivers\etc`).
-4. Add this text to the end of it replacing placeholders with the IPv4 address.
+4. Add this text to the end of it replacing (IPv4) with the IPv4 address you took from the host.
 ```
 (IPv4)       www.gulllebelle.com
 (IPv4)       gulllebelle.com
