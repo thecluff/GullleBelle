@@ -3,7 +3,7 @@
 A fake banking website for scambaiting copied as close to Kitboga's , "Gull and Bull", as possible.
 
 ## Disclaimer
-Please only use this for scambaiting or personal means that do not hurt anyone. Please do not publish this to anywhere, keep it in your computer or VM only.
+Please only use this for scambaiting or personal means that do not hurt anyone. Do not publish this to anywhere, keep it in your computer or VM only.
 
 ## Features
 * Fake bank account sign up
@@ -71,6 +71,3 @@ CREATE TABLE `users` (
 
 14. Retart 'MySQL' and 'Apache' in the XAMPP control panel.
 15. Go to www.gulllebelle.com (this link only works on your computer) and you're done!
-
-## Warning!!
-Do not publish this! Not because I don't want you to, but you might get in trouble for starting a fake bank website.
