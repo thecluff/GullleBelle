@@ -1,4 +1,4 @@
-# Gull le Belle
+# Documentation
 
 A fake banking website for scambaiting copied as close to Kitboga's , "Gull and Bull", as possible.
 
