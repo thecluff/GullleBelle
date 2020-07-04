@@ -72,3 +72,14 @@ CREATE TABLE `users` (
 
 15. Retart 'MySQL' and 'Apache' in the XAMPP control panel.
 16. Go to www.gulllebelle.com (this link only works on your computer) and you're done!
+## Extra
+### For other computers on the same network
+1. Open command prompt on the host computer.
+2. Run `ipconfig` and get your local IPv4 address.
+3. On the client computer open the host file from their computer (`C:\Windows\System32\drivers\etc`).
+4. Add this text to the end of it replacing placeholders with the IPv4 address.
+```
+(IPv4)       www.gulllebelle.com
+(IPv4)       gulllebelle.com
+```
+5. Done!

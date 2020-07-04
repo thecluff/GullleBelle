@@ -235,7 +235,7 @@ body {
 
 section {
     position: relative;
-    background: #fff;
+    background: #eee;
     left: -8px;
     margin: 0;
     top: 6em;
@@ -245,7 +245,7 @@ section {
 }
 
 .about, .other-info {
-    background: #eee;
+    background: #fff;
     color: #202020;
 }
 
@@ -260,9 +260,9 @@ section {
 
 section .content {
     padding-left: 12.5%;
-    padding-top: 8em;
+    padding-top: 4em;
     padding-right: 12.5%;
-    padding-bottom: 8em;
+    padding-bottom: 4em;
     margin: 0;
     text-align: center;
 }
@@ -283,7 +283,7 @@ section .content {
 .footer {
     position: fixed;
     width: 100%;
-    background: #fff;
+    background: #eee;
     text-align: center;
     z-index: 1;
     bottom: 0;
