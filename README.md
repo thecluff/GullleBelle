@@ -23,10 +23,11 @@ Please only use this for scambaiting or personal means that do not hurt anyone. 
 2. Download [GullleBelle-master.zip](https://github.com/lahrence/GullleBelle/archive/master.zip).
 3. Go to `C:\xampp\htdocs` (or wherever your htdocs folder is) and delete all the files/folders.
 4. Unzip the `GullleBelle-master.zip` and drag the folder into the htdocs folder.
-5. In the XAMPP control panel, start 'MySQL' and 'Apache'.
-6. Go to [phpmyadmin](http://localhost/phpmyadmin/) (this link will only work if you have MySQL started).
-7. Create a new database called 'gulllebelle'.
-8. After the database is created, go to the SQL tab and copy this into the text area.
+5. Rename the folder to `GullleBelle` instead of `GullleBelle-master`.
+6. In the XAMPP control panel, start 'MySQL' and 'Apache'.
+7. Go to [phpmyadmin](http://localhost/phpmyadmin/) (this link will only work if you have MySQL started).
+8. Create a new database called 'gulllebelle'.
+9. After the database is created, go to the SQL tab and copy this into the text area.
 ```
 CREATE TABLE `users` (
   `idUsers` int(11) AUTO_INCREMENT KEY NOT NULL,
@@ -41,15 +42,15 @@ CREATE TABLE `users` (
   `credNum` tinytext NOT NULL
 )
 ```
-9. Click go.
-10. Go to `C:\Windows\System32\drivers\etc` and open `hosts` with notepad.
-11. Add this text to the end of it and save. 
+10. Click go.
+11. Go to `C:\Windows\System32\drivers\etc` and open `hosts` with notepad.
+12. Add this text to the end of it and save. 
 ```
 127.0.0.1       www.gulllebelle.com
 127.0.0.1       gulllebelle.com
 ```
-12. Go to `(Your Xampp folder)\apache\conf\extra` and open `httpd-vhosts.conf`  (Replace `(Your Xampp folder)` with your Xampp folder).
-13. Add this text to the end of it and save.
+13. Go to `(Your Xampp folder)\apache\conf\extra` and open `httpd-vhosts.conf`  (Replace `(Your Xampp folder)` with your Xampp folder).
+14. Add this text to the end of it and save.
 ````
 <VirtualHost *:80>
     ServerAdmin webmaster@gulllebelle
@@ -69,5 +70,5 @@ CREATE TABLE `users` (
 ````  
 (Replace `(Your Xampp folder)` with your Xampp folder).
 
-14. Retart 'MySQL' and 'Apache' in the XAMPP control panel.
-15. Go to www.gulllebelle.com (this link only works on your computer) and you're done!
+15. Retart 'MySQL' and 'Apache' in the XAMPP control panel.
+16. Go to www.gulllebelle.com (this link only works on your computer) and you're done!
