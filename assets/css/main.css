@@ -150,6 +150,16 @@ body {
     text-decoration: none;
 }
 
+.nb_top_logo p {
+    top: 6px;
+    position: fixed;
+    right: 40px;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Cormorant', serif;
+    text-decoration: none;
+}
+
 .logout-button:hover {
     color: #eee;
 }
@@ -355,6 +365,12 @@ section .content {
 }
 
 .user-info h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #202020;
+    text-align: left;
+}
+
+.user-info h2 {
     font-family: 'Roboto', sans-serif;
     color: #202020;
     text-align: left;

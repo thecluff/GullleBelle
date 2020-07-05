@@ -52,7 +52,10 @@
                     </td>
                     <td>
                     <?php
-                        echo '$'.number_format($userCheckingBal, 2, '.', ',');
+                        if ($userCheckingBal < 0) {
+                            echo '-';
+                        }
+                        echo '$'.number_format(abs($userCheckingBal), 2, '.', ',');
                     ?>
                     </td>
                     <td><a href="/transfer/index.php?transferfrom=check">Transfer</a></td>
@@ -66,7 +69,10 @@
                     </td>
                     <td>
                     <?php
-                        echo '$'.number_format($userCreditsBal, 2, '.', ',');
+                        if ($userCreditsBal < 0) {
+                            echo '-';
+                        }
+                        echo '$'.number_format(abs($userCreditsBal), 2, '.', ',');
                     ?>
                     </td>
                     <td><a href="/transfer/index.php?transferfrom=cred">Transfer</a></td>
@@ -80,7 +86,10 @@
                     </td>
                     <td>
                     <?php
-                        echo '$'.number_format($userSavingsBal, 2, '.', ',');
+                        if ($userSavingsBal < 0) {
+                            echo '-';
+                        }
+                        echo '$'.number_format(abs($userSavingsBal), 2, '.', ',');
                     ?>
                     </td>
                     <td><a href="/transfer/index.php?transferfrom=sav">Transfer</a></td>

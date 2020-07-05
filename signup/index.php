@@ -17,6 +17,59 @@
 <div class="signup-div">
     <form action="/includes/signup.inc.php" method="post" class="signupform">
         <h1>Signup</h1>
+        <input type="text" name="firstname" id="firstname" placeholder="firstname" maxlength="35" value="<?php
+            if (isset($_GET['error'])) {
+                if ($_GET['error'] == "invalidmail") {
+                    echo $_GET['firstname'];
+                } else if ($_GET['error'] == "emailtaken") {
+                    echo $_GET['firstname'];
+                } else if ($_GET['error'] == "emptyfields") {
+                    echo $_GET['firstname'];
+                } else if ($_GET['error'] == "passwordCheck") {
+                    echo $_GET['firstname'];
+                } else if ($_GET['error'] == "passlength") {
+                    echo $_GET['firstname'];
+                } else if ($_GET['error'] == "emailtaken") {
+                    echo $_GET['firstname'];
+                } else if ($_GET['error'] == "passlength") {
+                    echo $_GET['firstname'];
+                } else if ($_GET['error'] == "uidtaken") {
+                    echo $_GET['firstname'];
+                } else if ($_GET['error'] == "invaliduid") {
+                    echo $_GET['firstname'];
+                }
+            }
+        ?>">
+        <input type="text" name="lastname" id="lastname" placeholder="lastname" maxlength="35" value="<?php
+            if (isset($_GET['error'])) {
+                if ($_GET['error'] == "invalidmail") {
+                    echo $_GET['lastname'];
+                } else if ($_GET['error'] == "emailtaken") {
+                    echo $_GET['lastname'];
+                } else if ($_GET['error'] == "emptyfields") {
+                    echo $_GET['lastname'];
+                } else if ($_GET['error'] == "passwordCheck") {
+                    echo $_GET['lastname'];
+                } else if ($_GET['error'] == "passlength") {
+                    echo $_GET['lastname'];
+                } else if ($_GET['error'] == "emailtaken") {
+                    echo $_GET['lastname'];
+                } else if ($_GET['error'] == "passlength") {
+                    echo $_GET['lastname'];
+                } else if ($_GET['error'] == "uidtaken") {
+                    echo $_GET['lastname'];
+                } else if ($_GET['error'] == "invaliduid") {
+                    echo $_GET['lastname'];
+                }
+            }
+        ?>">
+        <?php
+        if (isset($_GET['error'])) {
+            if ($_GET['error'] == "characterlimit") {
+                echo '<p class="ins-funds">Your name exceeds the character limit. Abbreviate your name if needed.</p>';
+            }
+        }
+        ?>
         <input type="text" name="uid" id="username" placeholder="username" value="<?php
             if (isset($_GET['error'])) {
                 if ($_GET['error'] == "invalidmail") {
@@ -26,6 +79,12 @@
                 } else if ($_GET['error'] == "emptyfields") {
                     echo $_GET['uid'];
                 } else if ($_GET['error'] == "passwordCheck") {
+                    echo $_GET['uid'];
+                } else if ($_GET['error'] == "emailtaken") {
+                    echo $_GET['uid'];
+                } else if ($_GET['error'] == "characterlimit") {
+                    echo $_GET['uid'];
+                } else if ($_GET['error'] == "passlength") {
                     echo $_GET['uid'];
                 }
             }
@@ -48,6 +107,10 @@
                 } else if ($_GET['error'] == "uidtaken") {
                     echo $_GET['mail'];
                 } else if ($_GET['error'] == "passwordCheck") {
+                    echo $_GET['mail'];
+                } else if ($_GET['error'] == "characterlimit") {
+                    echo $_GET['mail'];
+                } else if ($_GET['error'] == "passlength") {
                     echo $_GET['mail'];
                 }
             }

@@ -35,7 +35,11 @@
                 }
             }
             ?>><?php
-                echo '****'.$userCheckingN.' ($'.number_format($userCheckingBal, 2, '.', ',');
+                echo '****'.$userCheckingN.' (';
+                if ($userCheckingBal < 0) {
+                    echo '-';
+                }
+                echo '$'.number_format(abs($userCheckingBal), 2, '.', ',');
             ?>)
             </option>    
             <option value="credits" <?php 
@@ -45,7 +49,11 @@
                 }
             }
             ?>><?php
-                echo '****'.$userCreditsN.' ($'.number_format($userCreditsBal, 2, '.', ',');
+                echo '****'.$userCreditsN.' (';
+                if ($userCreditsBal < 0) {
+                    echo '-';
+                }
+                echo '$'.number_format(abs($userCreditsBal), 2, '.', ',');
             ?>)
             </option>    
             <option value="savAcc" <?php 
@@ -55,7 +63,11 @@
                 }
             }
             ?>><?php
-                echo '****'.$userSavingsN.' ($'.number_format($userSavingsBal, 2, '.', ',');
+                echo '****'.$userSavingsN.' (';
+                if ($userSavingsBal < 0) {
+                    echo '-';
+                }
+                echo '$'.number_format(abs($userSavingsBal), 2, '.', ',');
             ?>)
             </option>    
         </select>
@@ -69,7 +81,11 @@
                 }
             }
             ?>><?php
-                echo '****'.$userCheckingN.' ($'.number_format($userCheckingBal, 2, '.', ',');
+                echo '****'.$userCheckingN.' (';
+                if ($userCheckingBal < 0) {
+                    echo '-';
+                }
+                echo '$'.number_format(abs($userCheckingBal), 2, '.', ',');
             ?>)
             </option>    
             <option value="credits" <?php 
@@ -83,7 +99,11 @@
                 echo "selected='selected'";
             }
             ?>><?php
-                echo '****'.$userCreditsN.' ($'.number_format($userCreditsBal, 2, '.', ',');
+                echo '****'.$userCreditsN.' (';
+                if ($userCreditsBal < 0) {
+                    echo '-';
+                }
+                echo '$'.number_format(abs($userCreditsBal), 2, '.', ',');
             ?>)
             </option>    
             <option value="savAcc" <?php 
@@ -95,7 +115,11 @@
                 }
             }
             ?>><?php
-                echo '****'.$userSavingsN.' ($'.number_format($userSavingsBal, 2, '.', ',');
+                echo '****'.$userSavingsN.' (';
+                if ($userSavingsBal < 0) {
+                    echo '-';
+                }
+                echo '$'.number_format(abs($userSavingsBal), 2, '.', ',');
             ?>)
             </option>    
         </select>

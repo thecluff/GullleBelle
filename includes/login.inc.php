@@ -31,6 +31,8 @@ if (isset($_POST['login-submit'])) {
                     $_SESSION['userId'] = $row['idUsers'];
                     $_SESSION['userUid'] = $row['uidUsers'];
                     $_SESSION['userEmail'] = $row['emailUsers'];
+                    $_SESSION['firstname'] = $row['firstname'];
+                    $_SESSION['lastname'] = $row['lastname'];
                     
                     $_SESSION['chckAcc'] = $row['chckAcc'];
                     $_SESSION['savAcc'] = $row['savAcc'];

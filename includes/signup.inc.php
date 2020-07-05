@@ -3,6 +3,8 @@ if (isset($_POST['signup-submit'])) {
     
     require 'dbh.inc.php';
     
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
     $username = $_POST['uid'];
     $email = $_POST['mail'];
     $password = $_POST['pwd'];
@@ -21,8 +23,8 @@ if (isset($_POST['signup-submit'])) {
     $savingsBal = 5000.00;
     $creditBal = 1000.00;
     
-    if (empty($username) || empty($email) ||  empty($password) ||  empty($passwordRepeat)) {
-        header("Location: ../signup/index.php?error=emptyfields&uid=".$username."&mail=".$email);
+    if (empty($firstname) || empty($lastname) || empty($username) || empty($email) ||  empty($password) ||  empty($passwordRepeat)) {
+        header("Location: ../signup/index.php?error=emptyfields&uid=".$username."&mail=".$email."&firstname=".$firstname."&lastname=".$lastname);
         exit();
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)) {
         header("Location: ../signup/index.php?error=invalidmailuid");
@@ -35,6 +37,9 @@ if (isset($_POST['signup-submit'])) {
         exit();
     } else if ($password !== $passwordRepeat) {
         header("Location: ../signup/index.php?error=passwordcheck&uid=".$username."&mail=".$email);
+        exit();
+    } else if ((strlen($lastname) > 35) || (strlen($firstname) > 35)) {
+        header("Location: ../signup/index.php?error=characterlimit&uid=".$username."&mail=".$email);
         exit();
     } else {
         $sql = "SELECT uidUsers FROM users WHERE uidUsers=?";
@@ -51,27 +56,27 @@ if (isset($_POST['signup-submit'])) {
             $result2 = mysqli_query($conn, $sql2);
             $resultCheck2 = mysqli_num_rows($result2);
 
-            if ($resultCheck2 > 0) {
-                header("Location: ../signup/index.php?error=emailtaken&uid=".$username);
+            if ($resultCheck > 0) {
+                header("Location: ../signup/index.php?error=uidtaken&mail=".$email."&firstname=".$firstname."&lastname=".$lastname);
                 exit();
-            } else if ($resultCheck > 0) {
-                header("Location: ../signup/index.php?error=uidtaken&mail=".$email);
+            } else if ($resultCheck2 > 0) {
+                header("Location: ../signup/index.php?error=emailtaken&uid=".$username."&firstname=".$firstname."&lastname=".$lastname);
                 exit();
             } else {
-                $sql = "INSERT INTO users (uidUsers, emailUsers, pwdUsers, chckAcc, savAcc, credits, chckNum, savNum, credNum) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                $sql = "INSERT INTO users (uidUsers, emailUsers, pwdUsers, firstname, lastname, chckAcc, savAcc, credits, chckNum, savNum, credNum) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                 $stmt = mysqli_stmt_init($conn);
                 if (!mysqli_stmt_prepare($stmt, $sql)) {
                     header("Location: ../signup/index.php?error=sqlerror");
                     exit();
                 } else if (strlen($password) < 6) {
-                    header("Location: ../signup/index.php?error=passlength&uid=".$username."&mail=".$email);
+                    header("Location: ../signup/index.php?error=passlength&uid=".$username."&mail=".$email."&firstname=".$firstname."&lastname=".$lastname);
                     exit();
                 } else if (!preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $password)) {
-                    header("Location: ../signup/index.php?error=weakpass&uid=".$username."&mail=".$email);
+                    header("Location: ../signup/index.php?error=weakpass&uid=".$username."&mail=".$email."&firstname=".$firstname."&lastname=".$lastname);
                     exit();
                 } else {
                     $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
-                    mysqli_stmt_bind_param($stmt, "sssssssss", $username, $email, $hashedPwd, $checkingBal, $savingsBal, $creditBal, $chck, $sav, $cred);
+                    mysqli_stmt_bind_param($stmt, "sssssssssss", $username, $email, $hashedPwd, $firstname, $lastname, $checkingBal, $savingsBal, $creditBal, $chck, $sav, $cred);
                     mysqli_stmt_execute($stmt);
                     header("Location: ../index.php?signup=success");
                     exit();

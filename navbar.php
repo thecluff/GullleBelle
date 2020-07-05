@@ -5,7 +5,8 @@
                 <h1>Gull <span class="le">le</span> Belle <span class="bank-text">Banking</span></h1>
                     <?php
                         if (isset($_SESSION['userId'])) {
-                            echo '<a class="logout-button" href="/includes/logout.inc.php">Log Out</a>';
+                            echo "<p>".$_SESSION['firstname']." ";
+                            echo $_SESSION['lastname']."</p>";
                         } else {
                             echo ' ';
                         }
@@ -19,6 +20,7 @@
                             echo '
                             <li><a href="/accounts">Accounts</a></li>
                             <li><a href="/transfer">Transfer</a></li>
+                            <li><a href="/includes/logout.inc.php">Logout</a></li>
                             ';
                         } else {
                             echo '
