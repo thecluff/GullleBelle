@@ -71,7 +71,7 @@ if (isset($_POST['signup-submit'])) {
                 } else if (strlen($password) < 6) {
                     header("Location: ../signup/index.php?error=passlength&uid=".$username."&mail=".$email."&firstname=".$firstname."&lastname=".$lastname);
                     exit();
-                } else if (!preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $password)) {
+                } else if (!preg_match('/[\'^£$%&*()};:"`{@#~?!.><>,|=_+¬-]/', $password)) {
                     header("Location: ../signup/index.php?error=weakpass&uid=".$username."&mail=".$email."&firstname=".$firstname."&lastname=".$lastname);
                     exit();
                 } else {

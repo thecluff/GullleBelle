@@ -150,14 +150,18 @@ body {
     text-decoration: none;
 }
 
-.nb_top_logo p {
-    top: 6px;
+.nb_top_logo a {
+    top: 22px;
     position: fixed;
-    right: 40px;
+    right: 12.5%;
     color: #fff;
     font-size: 16px;
     font-family: 'Cormorant', serif;
     text-decoration: none;
+}
+
+.nb_top_logo a:hover {
+    color: #bbb;
 }
 
 .logout-button:hover {
@@ -532,4 +536,12 @@ section .content {
     border: none;
     font-size: 16px;
     cursor: pointer
+}
+
+.update-anchor {
+    display: block;
+    margin-top: -2em;
+    color: #0000EE;
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
 }

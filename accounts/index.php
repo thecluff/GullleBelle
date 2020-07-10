@@ -147,7 +147,7 @@
             <p class="load">Load More</p>
                 </div>
         </div>
-        <script>document.addEventListener('contextmenu', event => event.preventDefault());
+        <!--<script>document.addEventListener('contextmenu', event => event.preventDefault());
         document.onkeydown = function(e) {
   if(event.keyCode == 123) {
     console.log('You cannot inspect Element');
@@ -170,7 +170,7 @@
     return false;
   }
 }
-        </script>
+        </script>-->
         <?php
             require '../footer.php';
         ?>

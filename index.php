@@ -34,9 +34,15 @@
             include('navbar.php');
         ?>
         <div class="welcome">
-            <h1>Welcome to Gull <span class="le">le</span> Belle Banking<?php
+            <h1>Welcome<?php
                 if (isset($_SESSION['userId'])) {
-                    echo ', '.$_SESSION['userUid'];
+                    echo ' back ';
+                } else {
+                    echo ' ';
+                }
+                ?>to Gull <span class="le">le</span> Belle Banking<?php
+                if (isset($_SESSION['userId'])) {
+                    echo ', '.$_SESSION['firstname']." ".$_SESSION['lastname'];
                 } else {
                     echo ' ';
                 }

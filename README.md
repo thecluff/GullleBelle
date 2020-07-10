@@ -34,6 +34,8 @@ CREATE TABLE `users` (
   `uidUsers` tinytext NOT NULL,
   `emailUsers` tinytext NOT NULL,
   `pwdUsers` longtext NOT NULL,
+  `firstname` text NOT NULL,
+  `lastname` text NOT NULL,
   `chckAcc` decimal(18,2) DEFAULT NULL,
   `savAcc` decimal(18,2) DEFAULT NULL,
   `credits` decimal(18,2) DEFAULT NULL,

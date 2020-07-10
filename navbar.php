@@ -5,7 +5,7 @@
                 <h1>Gull <span class="le">le</span> Belle <span class="bank-text">Banking</span></h1>
                     <?php
                         if (isset($_SESSION['userId'])) {
-                            echo "<p>".$_SESSION['firstname']." ";
+                            echo "<a href='/accounts/update/'>".$_SESSION['firstname']." ";
                             echo $_SESSION['lastname']."</p>";
                         } else {
                             echo ' ';
