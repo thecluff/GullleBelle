@@ -72,6 +72,9 @@
                     </td>
                     <td>
                     <?php
+                        if ($userCreditsBal > (($userCheckingBal+$userSavingsBal)/2)) {
+                            echo '<span title="Your debt is getting too high, consider spending less" style="color: red; cursor: default;">⚠</span>';
+                        }
                         if ($userCreditsBal < 0) {
                             echo '-';
                         }
@@ -324,13 +327,11 @@
                     </p></td>
                 </tr>
             </table>
-            <p class="load">Load More</p>
+            <p class="load"><a href="/activities/">Load More</a></p>
                 </div>
         </div>
         <?php
             require '../footer.php';
         ?>
     </body>
-
-
 </html>

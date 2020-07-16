@@ -1,5 +1,5 @@
 
-        <div class="nb">
+        <div class="nb no-print">
             <div class="nb_top_logo">
                 <img src="/assets/png/LogoGull.png" width="50">
                 <h1>Gull <span class="le">le</span> Belle <span class="bank-text">Banking</span></h1>
@@ -20,6 +20,7 @@
                             echo '
                             <li><a href="/accounts">Accounts</a></li>
                             <li><a href="/transfer">Transfer</a></li>
+                            <li><a href="/activities">Activities</a></li>
                             <li><a href="/includes/logout.inc.php">Logout</a></li>
                             ';
                         } else {

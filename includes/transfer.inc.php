@@ -31,11 +31,20 @@ if (isset($_POST['transfer-submit'])) {
     } else if ($inaccount == 'credits') {
         $accountNumber = $userCreditsN;
     }
+    if ($outaccount == 'chckAcc') {
+        $accountNumberCredits = $userCheckingN;
+    } else if ($outaccount == 'savAcc') {
+        $accountNumberCredits = $userSavingsN;
+    } else if ($outaccount == 'credits') {
+        $accountNumberCredits = $userCreditsN;
+    }
     if ($amount >= 0) {
         $positive = true;
+        $negative = false;
     }
     if ($amount < 0) {
         $positive = false;
+        $negative = true;
     }
     if ($amount <= 5000) {
         if ($outaccount !== $inaccount) {
@@ -64,12 +73,12 @@ if (isset($_POST['transfer-submit'])) {
                             $sql = "UPDATE users SET ".$outaccount."=".$outaccount."-".$amount.", ".$inaccount."=".$inaccount."-".$amount." WHERE    idUsers=".$idUser.";";
                             mysqli_query($conn, $sql);
                             $new = array(
-                                "account"=>"****".$accountNumber, 
+                                "account"=>"****".$accountNumberCredits, 
                                 "date"=>date("m/d"),
                                 "year"=>date("Y"),
                                 "desc"=>"Transfer", 
                                 "amount"=>floatval($amount),
-                                "positive"=>$positive
+                                "positive"=>$negative
                             );
                             $json = trim(file_get_contents("../assets/users/".$_SESSION['userUid'].".json"), "\xEF\xBB\xBF");
                             $arr = json_decode($json, true);

@@ -42,7 +42,7 @@
                 }
                 ?>to Gull <span class="le">le</span> Belle Banking<?php
                 if (isset($_SESSION['userId'])) {
-                    echo ', '.$_SESSION['firstname']." ".$_SESSION['lastname'];
+                    echo ', '.$_SESSION['userUid'];
                 } else {
                     echo ' ';
                 }
