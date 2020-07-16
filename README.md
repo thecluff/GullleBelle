@@ -17,7 +17,7 @@ Please only use this for scambaiting or personal means that do not hurt anyone. 
 * External account transfer
 * Any other features I can think of
 
-## How to use
+## How to setup
 ### This instruction is for windows users, although the steps are mostly the same.
 1. Install [XAMPP](https://www.apachefriends.org/index.html).
 2. Download [GullleBelle-master.zip](https://github.com/lahrence/GullleBelle/archive/master.zip).
@@ -74,6 +74,16 @@ CREATE TABLE `users` (
 
 15. Retart 'MySQL' and 'Apache' in the XAMPP control panel.
 16. Go to www.gulllebelle.com (this link only works on your computer) and you're done!
+## How to use
+### Sign up
+Click on `join us` on the website and fill in the form to sign up.
+The default values will be given to each account.
+### Transaction history
+Recent activities can be edited by editing the json files corresponding with the username in `/assets/users/`.
+### Creepy face
+Creepy face will show up randomly in the website. To modify it, find the interval function in `/assets/js/main.js`.
+To remove it, open `/head.php` and delete `<div class="userinformation"></div>`.
+
 ## Extra
 ### For other computers on the same network
 1. Open command prompt on the host computer.
