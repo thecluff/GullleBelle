@@ -14,7 +14,7 @@ Please only use this for scambaiting or personal means that do not hurt anyone. 
 * Creepy face show up from time to time
 
 ## Features to add
-* Transfer balance to other users
+* External account transfer
 * Any other features I can think of
 
 ## How to use
