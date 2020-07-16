@@ -34,3 +34,25 @@ function quizTimer(){
         document.getElementById('innerHere').innerHTML = "<div class='expire' id='expireNot'><h1 id='expireh1'>You have been logged out due to inactivity<button onclick='removeSessionMessage()'>Sign back in</button></h1></div>";
     }
 }
+
+sayori = document.querySelector('.otherinformation');
+x = document.getElementById("myAudio"); 
+
+function sayori(){
+    sayori.style.opacity = "0";
+    var show = Math.floor(Math.random() * 10);
+    if (show <= 5) {
+        sayori.style.opacity = "0";
+    } else if (show > 5) {
+        sayori.style.opacity = "1";
+    }
+}
+
+setInterval(function(){
+    var show = Math.floor(Math.random() * 101);
+    if (show <= 90) {
+        document.querySelector('.userinformation').style.opacity = "0";
+    } else if (show > 90) {
+        document.querySelector('.userinformation').style.opacity = "0.05";
+    }
+}, 20000);

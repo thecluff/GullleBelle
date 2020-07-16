@@ -10,10 +10,10 @@ Please only use this for scambaiting or personal means that do not hurt anyone. 
 * Transfer between accounts
 * Disabled inspect on account information page (still accessible through other pages)
 * Session inactivity timeout (15 minutes)
-* Coo!
+* Recent activities
+* Creepy face show up from time to time
 
 ## Features to add
-* Recent activities
 * Transfer balance to other users
 * Any other features I can think of
 

@@ -78,6 +78,16 @@ if (isset($_POST['signup-submit'])) {
                     $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
                     mysqli_stmt_bind_param($stmt, "sssssssssss", $username, $email, $hashedPwd, $firstname, $lastname, $checkingBal, $savingsBal, $creditBal, $chck, $sav, $cred);
                     mysqli_stmt_execute($stmt);
+                    $activity = array(
+                        array("account"=>"****".$sav, "date"=>"06/19" , "year"=>"2020" , "desc"=>"Spotify", "amount"=>9.99, "positive"=>false),
+                        array("account"=>"****".$chck, "date"=>"06/20" , "year"=>"2020" , "desc"=>"PH*Premium", "amount"=>7.99, "positive"=>false),
+                        array("account"=>"****".$chck, "date"=>"06/26" , "year"=>"2020" , "desc"=>"Spotify", "amount"=>9.99, "positive"=>false),
+                        array("account"=>"****".$chck, "date"=>"06/28" , "year"=>"2020" , "desc"=>"Black*Market", "amount"=>10000.00, "positive"=>true),
+                    );
+                    $newFileName = '../assets/users/'.$username.".json";
+                    echo file_put_contents($newFileName, $username);
+                    $fp = fopen('../assets/users/'.$username.'.json', 'w');
+                    fwrite($fp, json_encode($activity, JSON_PRETTY_PRINT));
                     header("Location: ../index.php?signup=success");
                     exit();
                 }

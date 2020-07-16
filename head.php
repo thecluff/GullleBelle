@@ -16,3 +16,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     </head>
+    <audio id="myAudio">
+        <source src="/assets/wav/distcort.wav" type="audio/wav">
+    </audio>
+    <div class="userinformation"></div>

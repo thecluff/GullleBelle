@@ -29,6 +29,9 @@
         
         </script>';
     }
+    $json = trim(file_get_contents("../assets/users/".$_SESSION['userUid'].".json"), "\xEF\xBB\xBF");
+    $arr = json_decode($json, true);
+    $accountInfo = array_reverse($arr);
 ?>
     <body>
         <div id="innerHere"></div>
@@ -106,71 +109,224 @@
                 <tr>
                     <td>
                     <?php
-                        echo '****'.$userCheckingN;
+                        if (array_key_exists(0 ,$accountInfo)) {
+                            echo $accountInfo[0]['account'];
+                        }
                     ?>
                     </td>
-                    <td>06/28</td>
-                    <td>Black*Market</td>
-                    <td class="positive"><p>+$10,000.00</p></td>
+                    <td>
+                    <?php
+                        if (array_key_exists(0 ,$accountInfo)) {
+                            echo $accountInfo[0]['date'];
+                        }
+                    ?>
+                    </td>
+                    <td>
+                    <?php
+                        if (array_key_exists(0 ,$accountInfo)) {
+                            echo $accountInfo[0]['desc'];
+                        }
+                    ?>
+                    </td>
+                    <td class="<?php
+                        if (array_key_exists(0 ,$accountInfo)) {
+                            if ($accountInfo[0]['positive'] == true){
+                                echo 'positive';
+                            } else {
+                                echo 'negative';
+                            }
+                        }
+                    ?>"><p>
+                    <?php
+                        if (array_key_exists(0 ,$accountInfo)) {
+                            if ($accountInfo[0]['positive'] == true){
+                                echo '+$';
+                            } else {
+                                echo '-$';
+                            }
+                            echo number_format($accountInfo[0]['amount'], 2, '.', ',');
+                        }
+                    ?>
+                    </p></td>
                 </tr>
                 <tr class="checker">
                     <td>
                     <?php
-                        echo '****'.$userCheckingN;
+                        if (array_key_exists(1 ,$accountInfo)) {
+                            echo $accountInfo[1]['account'];
+                        }
                     ?>
                     </td>
-                    <td>06/26</td>
-                    <td>Spotify</td>
-                    <td class="negative"><p>-$9.99</p></td>
+                    <td>
+                    <?php
+                        if (array_key_exists(1 ,$accountInfo)) {
+                            echo $accountInfo[1]['date'];
+                        }
+                    ?>
+                    </td>
+                    <td>
+                    <?php
+                        if (array_key_exists(1 ,$accountInfo)) {
+                            echo $accountInfo[1]['desc'];
+                        }
+                    ?>
+                    </td>
+                    <td class="<?php
+                        if (array_key_exists(1 ,$accountInfo)) {
+                            if ($accountInfo[1]['positive'] == true){
+                                echo 'positive';
+                            } else {
+                                echo 'negative';
+                            }
+                        }
+                    ?>"><p>
+                    <?php
+                        if (array_key_exists(1 ,$accountInfo)) {
+                            if ($accountInfo[1]['positive'] == true){
+                                echo '+$';
+                            } else {
+                                echo '-$';
+                            }
+                            echo number_format($accountInfo[1]['amount'], 2, '.', ',');
+                        }
+                    ?>
+                    </p></td>
                 </tr>
                 <tr>
                     <td>
                     <?php
-                        echo '****'.$userCheckingN;
+                        if (array_key_exists(2 ,$accountInfo)) {
+                            echo $accountInfo[2]['account'];
+                        }
                     ?>
                     </td>
-                    <td>06/20</td>
-                    <td>PH*Premium</td>
-                    <td class="negative"><p>-$7.99</p></td>
+                    <td>
+                    <?php
+                        if (array_key_exists(2 ,$accountInfo)) {
+                            echo $accountInfo[2]['date'];
+                        }
+                    ?>
+                    </td>
+                    <td>
+                    <?php
+                        if (array_key_exists(2 ,$accountInfo)) {
+                            echo $accountInfo[2]['desc'];
+                        }
+                    ?>
+                    </td>
+                    <td class="<?php
+                        if (array_key_exists(2 ,$accountInfo)) {
+                            if ($accountInfo[2]['positive'] == true){
+                                echo 'positive';
+                            } else {
+                                echo 'negative';
+                            }
+                        }
+                    ?>"><p>
+                    <?php
+                        if (array_key_exists(2 ,$accountInfo)) {
+                            if ($accountInfo[2]['positive'] == true){
+                                echo '+$';
+                            } else {
+                                echo '-$';
+                            }
+                            echo number_format($accountInfo[2]['amount'], 2, '.', ',');
+                        }
+                    ?>
+                    </p></td>
                 </tr>
                 <tr class="checker">
                     <td>
                     <?php
-                        echo '****'.$userSavingsN;
+                        if (array_key_exists(3 ,$accountInfo)) {
+                            echo $accountInfo[3]['account'];
+                        }
                     ?>
                     </td>
-                    <td>06/19</td>
-                    <td>MS*Refund</td>
-                    <td class="negative"><p>-$2,100.00</p></td>
+                    <td>
+                    <?php
+                        if (array_key_exists(3 ,$accountInfo)) {
+                            echo $accountInfo[3]['date'];
+                        }
+                    ?>
+                    </td>
+                    <td>
+                    <?php
+                        if (array_key_exists(3 ,$accountInfo)) {
+                            echo $accountInfo[3]['desc'];
+                        }
+                    ?>
+                    </td>
+                    <td class="
+                    <?php
+                        if (array_key_exists(3 ,$accountInfo)) {
+                            if ($accountInfo[3]['positive'] == true){
+                                echo 'positive';
+                            } else {
+                                echo 'negative';
+                            }
+                        }
+                    ?>">
+                    <p>
+                    <?php
+                        if (array_key_exists(3 ,$accountInfo)) {
+                            if ($accountInfo[3]['positive'] == true){
+                                echo '+$';
+                            } else {
+                                echo '-$';
+                            }
+                            echo number_format($accountInfo[3]['amount'], 2, '.', ',');
+                        }
+                    ?>
+                    </p></td>
+                </tr>
+                <tr>
+                    <td>
+                    <?php
+                        if (array_key_exists(4 ,$accountInfo)) {
+                            echo $accountInfo[4]['account'];
+                        }
+                    ?>
+                    </td>
+                    <td>
+                    <?php
+                        if (array_key_exists(4 ,$accountInfo)) {
+                            echo $accountInfo[4]['date'];
+                        }
+                    ?>
+                    </td>
+                    <td>
+                    <?php
+                        if (array_key_exists(4 ,$accountInfo)) {
+                            echo $accountInfo[4]['desc'];
+                        }
+                    ?>
+                    </td>
+                    <td class="<?php
+                        if (array_key_exists(4 ,$accountInfo)) {
+                            if ($accountInfo[4]['positive'] == true){
+                                echo 'positive';
+                            } else {
+                                echo 'negative';
+                            }
+                        }
+                    ?>"><p>
+                    <?php
+                        if (array_key_exists(4 ,$accountInfo)) {
+                            if ($accountInfo[4]['positive'] == true){
+                                echo '+$';
+                            } else {
+                                echo '-$';
+                            }
+                            echo number_format($accountInfo[4]['amount'], 2, '.', ','); 
+                        }
+                    ?>
+                    </p></td>
                 </tr>
             </table>
             <p class="load">Load More</p>
                 </div>
         </div>
-        <!--<script>document.addEventListener('contextmenu', event => event.preventDefault());
-        document.onkeydown = function(e) {
-  if(event.keyCode == 123) {
-    console.log('You cannot inspect Element');
-     return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-    console.log('You cannot inspect Element');
-    return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-    console.log('You cannot inspect Element');
-    return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-    console.log('You cannot inspect Element');
-    return false;
-  }
-  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-    console.log('You cannot inspect Element');
-    return false;
-  }
-}
-        </script>-->
         <?php
             require '../footer.php';
         ?>
