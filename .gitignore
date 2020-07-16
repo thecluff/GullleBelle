@@ -1,1 +1,2 @@
-assets/users/
+assets/users/*
+!assets/users/delete.txt
