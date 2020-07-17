@@ -563,13 +563,50 @@ section .content {
 }
 
 .pagi {
-    margin: 10px 4px;
+    padding: 5px 10px;
+    color: #000;
     font-family: 'Roboto', sans-serif;
+    background: transparent;
+    text-decoration: none;
+    transition: color ease 0.3s, background ease 0.3s, border-radius 0.2s ease;
+    border: transparent solid 1px;
+    font-size: 16px;
+}
+
+.pagi:hover {
+    color: #eee;
+}
+
+.pagetoomuch {
+    user-select: none;
 }
 
 .current {
-    color: #202020 !important;
+    user-select: none;
+    color: #000;
+    background: #eee;
+    border: #eee solid 1px;
+    border-radius: 5px !important;
     font-family: 'Roboto', sans-serif;
+}
+
+.current:hover {
+    color: #000 !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.pagination a:first-child {
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.pagination a:last-child {
+    margin: 10px;
+    border-radius: 10px;
 }
 
 @media print {    

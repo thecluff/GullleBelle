@@ -327,7 +327,7 @@
                     </p></td>
                 </tr>
             </table>
-            <p class="load"><a href="/activities/">Load More</a></p>
+            <p class="load" style="margin-bottom: 100px;"><a href="/activities/">Load More</a></p>
                 </div>
         </div>
         <?php

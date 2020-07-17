@@ -1,5 +1,5 @@
 
-        <footer class="footer">
+        <footer class="footer no-print">
             <div class="footer-content">
                 <p>© Gull le Belle 
                     <?php
