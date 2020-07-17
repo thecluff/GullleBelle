@@ -145,7 +145,7 @@ body {
 }
 
 .nb_top_logo {
-    background: #402285;
+    background-color: #402285;
     display: flex;
     align-items: center;
     user-select: none;
@@ -195,12 +195,13 @@ body {
     font-size: 15px;
     color: #fefefe;
 }
-
+/*402285*/
 .list {
     left: 0;
-    background: rgb(59,59,59);
-    background: linear-gradient(0deg, rgba(59,59,59,1) 0%, rgba(13,13,13,1) 29%, rgba(80,80,80,1) 100%);
-    border-top: 1px solid rgb(42,42,42);
+    background: #20202090;
+    backdrop-filter: blur(10px);
+    /*background: rgb(59,59,59);
+    background: linear-gradient(0deg, rgba(59,59,59,1) 0%, rgba(13,13,13,1) 29%, rgba(80,80,80,1) 100%);*/
 }
 
 .list ul {
@@ -220,8 +221,9 @@ body {
 }
 
 .list ul li:hover {
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 31%, rgba(195,195,195,1) 100%);
+    background: #eee;
+    /*background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 31%, rgba(195,195,195,1) 100%);*/
 }
 
 .list ul li a {
@@ -245,7 +247,7 @@ body {
     font-size: 45px;
     font-family: 'Cormorant', serif;
     margin-left: 12.5%;
-    background: rgba(0,0,0,0.5);
+    background: #20202090;
     backdrop-filter: blur(10px);
     padding: 5px 10px;
 }

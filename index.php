@@ -48,7 +48,32 @@
                 }
                 
                 ?></h1>
-            <p>Money problems? Where we're going we won't have money problems.</p>
+            <?php
+                $slogan = rand(1, 101);
+                if ($slogan <= 10) {
+                    echo "<p>Money problems? Where we're going we won't have money problems.</p>";
+                } else if ($slogan <= 20) {
+                    echo "<p>THIS IS AMERICA!!!</p>";
+                } else if ($slogan <= 30) {
+                    echo "<p>That's not true! That's impossible!</p>";
+                } else if ($slogan <= 40) {
+                    echo "<p>Also try Minecraft!</p>";
+                } else if ($slogan <= 50) {
+                    echo "<p>Legitimate companies do not use gift cards as a payment method.</p>";
+                } else if ($slogan <= 60) {
+                    echo "<p>Just wait a moment sir!</p>";
+                } else if ($slogan <= 70) {
+                    echo "<p>Gull le Belle will help with each and everything!</p>";
+                } else if ($slogan <= 80) {
+                    echo "<p>What do you think I'm fool here bro?</p>";
+                } else if ($slogan <= 90) {
+                    echo "<p>Sir!!</p>";
+                } else if ($slogan <= 91) {
+                    echo "<p>Don't log in!!! He or she is scamming you!!!</p>";
+                } else if ($slogan <= 101) {
+                    echo "<p>Did you connect on teamviewer, supportme, or something else?</p>";
+                }
+            ?>
         </div>
         <div id="innerHere"></div>
         <section class="about">
