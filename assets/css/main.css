@@ -609,6 +609,13 @@ section .content {
     border-radius: 10px;
 }
 
+.showall {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    text-align: left !important;
+    margin-top: 20px;
+}
+
 @media print {    
     .no-print, .no-print * {
         display: none !important;

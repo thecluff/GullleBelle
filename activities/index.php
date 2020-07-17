@@ -32,7 +32,7 @@
     $json = trim(file_get_contents("../assets/users/".$_SESSION['userUid'].".json"), "\xEF\xBB\xBF");
     $arr = json_decode($json, true);
     $accountInfo = array_reverse($arr);
-    $chunked = array_chunk($accountInfo, 11);
+    $chunked = array_chunk($accountInfo, 10);
     if (isset($_GET['page'])) {
         $page = $_GET['page'] - 1;
     } else {
@@ -496,50 +496,8 @@
                     ?>
                     </p></td>
                 </tr>
-                <tr>
-                    <td>
-                    <?php
-                        if (array_key_exists(10 ,$chunked[$page])) {
-                            echo $chunked[$page][10]['account'];
-                        }
-                    ?>
-                    </td>
-                    <td>
-                    <?php
-                        if (array_key_exists(10 ,$chunked[$page])) {
-                            echo $chunked[$page][10]['date'];
-                        }
-                    ?>
-                    </td>
-                    <td>
-                    <?php
-                        if (array_key_exists(10 ,$chunked[$page])) {
-                            echo $chunked[$page][10]['desc'];
-                        }
-                    ?>
-                    </td>
-                    <td class="<?php
-                        if (array_key_exists(10 ,$chunked[$page])) {
-                            if ($chunked[$page][10]['positive'] == true){
-                                echo 'positive';
-                            } else {
-                                echo 'negative';
-                            }
-                        }
-                    ?>"><p>
-                    <?php
-                        if (array_key_exists(10 ,$chunked[$page])) {
-                            if ($chunked[$page][10]['positive'] == true){
-                                echo '+$';
-                            } else {
-                                echo '-$';
-                            }
-                            echo number_format($chunked[$page][10]['amount'], 2, '.', ','); 
-                        }
-                    ?>
-                    </p></td>
-                </tr>
             </table>
+                <a class="showall no-print" href="all/">Show all</a>
         <div class="pagination" style="margin-top: 10px; margin-bottom: 100px;">
             <?php
             $pageNumNeg = $_GET['page'] - 1;
@@ -593,9 +551,6 @@
                 } else {
                     echo "<a class='pagi no-print current'>❯</a>";
                 }
-            /*<select>
-                <option>•••</option>
-            </select>*/
             ?>
         </div>
     </div>
