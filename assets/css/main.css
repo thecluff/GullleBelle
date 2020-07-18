@@ -662,7 +662,7 @@ tr:last-child td:last-child {
     }
 }
 
-.loadpage {
+#loadpage {
     z-index: 100;
     position: fixed;
     width: 100%;
@@ -671,4 +671,5 @@ tr:last-child td:last-child {
     top: 0vh;
     bottom: 0;
     background: white;
+    display: block;
 }

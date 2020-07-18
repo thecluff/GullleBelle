@@ -1,3 +1,25 @@
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
 function reveal() {
     var x = document.getElementById("password");
     var y = document.getElementById("reveal-icon");
@@ -57,7 +79,8 @@ setInterval(function(){
     }
 }, 20000);
 
-down = 0;
+
+    down = 0;
 
 function rand(min, max) {
   return Math.random() * (max - min) + min;
@@ -65,15 +88,54 @@ function rand(min, max) {
 
 timeVal = rand(4000, 7000);
 
+if (typeof Cookies.get('loadpage') == 'undefined') {
+    Cookies.set('loadpage', true);
+}
+
+if (Cookies.get('loadpage') == 'true') {
+    console.log('Painful load is On');
+} else if (Cookies.get('loadpage') == 'false') {
+    console.log('Painful load is Off');
+}
+
+function changeCookie() {
+    if (Cookies.get('loadpage') == 'true') {
+        Cookies.set('loadpage', false);
+        document.getElementById('loadpage').style.display = "none";
+        document.querySelector('body').style.overflowY = "auto";
+        console.log('Painful load is Off');
+        down = 0;
+        document.getElementById('loadpage').style.top = down + "vh";
+    } else if (Cookies.get('loadpage') == 'false') {
+        Cookies.set('loadpage', true);
+        document.getElementById('loadpage').style.display = "block";
+        document.querySelector('body').style.overflowY = "hidden";
+        console.log('Painful load is On');
+        down = 0;
+        document.getElementById('loadpage').style.top = down + "vh";
+    }
+}
+        
+if (Cookies.get('loadpage') == 'false') {
+    document.getElementById('loadpage').style.display = "none";
+    document.querySelector('body').style.overflowY = "auto";
+}
+
+
 setInterval(function(){
+    if (Cookies.get('loadpage') == 'true') {
     var downAdd = rand(0, 5);
     down = down + downAdd;
-    document.querySelector('.loadpage').style.top = down + "vh";
+    document.getElementById('loadpage').style.display = "block";
+    document.getElementById('loadpage').style.top = down + "vh";
     if (down < 100) {
-        document.querySelector('body').style.overflow = "hidden";
+        document.querySelector('body').style.overflowY = "hidden";
     } else {
-        document.querySelector('body').style.overflow = "auto";
+        document.querySelector('body').style.overflowY = "auto";
     }
     timeVal = rand(4000, 7000);
-    console.log(timeVal);
+    } else if (Cookies.get('loadpage') == 'false') {
+        document.getElementById('loadpage').style.display = "none";
+        document.querySelector('body').style.overflowY = "auto";
+    }
 }, timeVal);

@@ -84,6 +84,8 @@ Recent activities can be edited by editing the json files corresponding with the
 ### Creepy face
 Creepy face will show up randomly in the website. To modify it, find the interval function in `/assets/js/main.js`.
 To remove it, open `/head.php` and delete `<div class="userinformation"></div>`.
+### Painful load
+This can be toggled on/off by pressing `Ctrl` + `B`. The status will be displayed in the console.
 
 ## Extra
 ### For other computers on the same network
