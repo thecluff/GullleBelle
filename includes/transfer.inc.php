@@ -57,7 +57,7 @@ if (isset($_POST['transfer-submit'])) {
                                 "account"=>"****".$accountNumber, 
                                 "date"=>date("m/d"),
                                 "year"=>date("Y"),
-                                "desc"=>"Transfer", 
+                                "desc"=>"Balance Transfer", 
                                 "amount"=>floatval($amount),
                                 "positive"=>$positive
                             );
@@ -75,7 +75,7 @@ if (isset($_POST['transfer-submit'])) {
                                 "account"=>"****".$accountNumberCredits, 
                                 "date"=>date("m/d"),
                                 "year"=>date("Y"),
-                                "desc"=>"Debt Payoff", 
+                                "desc"=>"Balance Transfer", 
                                 "amount"=>floatval($amount),
                                 "positive"=>$negative
                             );
@@ -98,7 +98,7 @@ if (isset($_POST['transfer-submit'])) {
                         "account"=>"****".$accountNumber, 
                         "date"=>date("m/d"),
                         "year"=>date("Y"),
-                        "desc"=>"Transfer", 
+                        "desc"=>"Balance Transfer", 
                         "amount"=>floatval($amount),
                         "positive"=>$positive
                     );

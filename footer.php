@@ -4,6 +4,6 @@
                 <p>© Gull le Belle 
                     <?php
                         echo date('Y');
-                    ?> Coo!</p>
+                    ?></p>
             </div>
         </footer>

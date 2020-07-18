@@ -9,7 +9,6 @@ if($_SESSION['timesince'] >= 900) {
     exit();
 } else {
     $_SESSION['sessionTimeStamp'] = time();
-    echo "<script>console.log('".$_SESSION['timesince']."')</script>";
 }
 }
 ?>

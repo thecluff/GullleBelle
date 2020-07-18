@@ -28,7 +28,6 @@
             switch (handler.key) {
                 case 'ctrl+b': changeCookie();
                 break;
-                default: alert(event);
             }
         });
     </script>
