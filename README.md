@@ -11,6 +11,7 @@ Please only use this for scambaiting or personal means that do not hurt anyone. 
 * Disabled inspect on account information page (still accessible through other pages)
 * Session inactivity timeout (15 minutes)
 * Recent activities
+* Painful loading time
 * Creepy face show up from time to time
 
 ## Features to add

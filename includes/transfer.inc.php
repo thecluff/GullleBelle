@@ -64,7 +64,6 @@ if (isset($_POST['transfer-submit'])) {
                             $json = trim(file_get_contents("../assets/users/".$_SESSION['userUid'].".json"), "\xEF\xBB\xBF");
                             $arr = json_decode($json, true);
                             $array = array_push($arr, $new);
-                            print_r($arr);
                             $fp = fopen('../assets/users/'.$_SESSION['userUid'].'.json', 'w');
                             fwrite($fp, json_encode($arr, JSON_PRETTY_PRINT));
                             header("Location: ../accounts/index.php?transfer=success");
@@ -76,14 +75,13 @@ if (isset($_POST['transfer-submit'])) {
                                 "account"=>"****".$accountNumberCredits, 
                                 "date"=>date("m/d"),
                                 "year"=>date("Y"),
-                                "desc"=>"Transfer", 
+                                "desc"=>"Debt Payoff", 
                                 "amount"=>floatval($amount),
                                 "positive"=>$negative
                             );
                             $json = trim(file_get_contents("../assets/users/".$_SESSION['userUid'].".json"), "\xEF\xBB\xBF");
                             $arr = json_decode($json, true);
                             $array = array_push($arr, $new);
-                            print_r($arr);
                             $fp = fopen('../assets/users/'.$_SESSION['userUid'].'.json', 'w');
                             fwrite($fp, json_encode($arr, JSON_PRETTY_PRINT));
                             header("Location: ../accounts/index.php?transfer=success");
@@ -107,7 +105,6 @@ if (isset($_POST['transfer-submit'])) {
                     $json = trim(file_get_contents("../assets/users/".$_SESSION['userUid'].".json"), "\xEF\xBB\xBF");
                     $arr = json_decode($json, true);
                     $array = array_push($arr, $new);
-                    print_r($arr);
                     $fp = fopen('../assets/users/'.$_SESSION['userUid'].'.json', 'w');
                     fwrite($fp, json_encode($arr, JSON_PRETTY_PRINT));
                     header("Location: ../accounts/index.php?transfer=success");

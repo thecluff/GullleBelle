@@ -39,7 +39,7 @@
         <div class="user-info">
             <div class="userdis">
             <h3>Accounts</h3>
-            <table style="width:100%">
+            <table style="width:100%" class="accounts-table">
                 <tr class="checker">
                     <th>Type</th>
                     <th>Account Number</th>

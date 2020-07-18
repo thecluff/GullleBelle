@@ -21,3 +21,4 @@
         <source src="/assets/wav/distcort.wav" type="audio/wav">
     </audio>
     <div class="userinformation"></div>
+    <div class="loadpage"></div>

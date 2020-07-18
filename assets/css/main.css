@@ -173,6 +173,7 @@ body {
     font-size: 16px;
     font-family: 'Cormorant', serif;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .nb_top_logo a:hover {
@@ -198,8 +199,7 @@ body {
 /*402285*/
 .list {
     left: 0;
-    background: #20202090;
-    backdrop-filter: blur(10px);
+    background: #202020;
     /*background: rgb(59,59,59);
     background: linear-gradient(0deg, rgba(59,59,59,1) 0%, rgba(13,13,13,1) 29%, rgba(80,80,80,1) 100%);*/
 }
@@ -241,15 +241,31 @@ body {
     z-index: 1;
 }
 
-.welcome h1 {
-    display: inline-block;
-    color: #fff;
-    font-size: 45px;
-    font-family: 'Cormorant', serif;
-    margin-left: 12.5%;
-    background: #20202090;
-    backdrop-filter: blur(10px);
-    padding: 5px 10px;
+@supports (backdrop-filter: none) {
+    .welcome h1 {
+        display: inline-block;
+        color: #fff;
+        font-size: 45px;
+        font-family: 'Cormorant', serif;
+        margin-left: 12.5%;
+        background: #20202090;
+        backdrop-filter: blur(10px) brightness(0.75);
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+}
+
+@supports not (backdrop-filter: none) {
+    .welcome h1 {
+        display: inline-block;
+        color: #fff;
+        font-size: 45px;
+        font-family: 'Cormorant', serif;
+        margin-left: 12.5%;
+        background: #202020;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
 }
 
 .le {
@@ -385,6 +401,10 @@ section .content {
     width: 74%;
 }
 
+.accounts-table td{
+    width: auto !important;
+}
+
 .user-info h3 {
     font-family: 'Roboto', sans-serif;
     color: #202020;
@@ -399,6 +419,22 @@ section .content {
 
 .user-info table {
     border-spacing: 0px;
+    border: 1px #eee solid;
+    border-radius: 10px;
+    border-collapse: separate;
+}
+
+tr:first-child td:first-child { 
+    border-top-left-radius: 8px;
+}
+tr:first-child td:last-child { 
+    border-top-right-radius: 8px; 
+}
+tr:last-child td:first-child { 
+    border-bottom-left-radius: 8px; 
+}
+tr:last-child td:last-child { 
+    border-bottom-right-radius: 8px; 
 }
 
 .user-info tr {
@@ -418,11 +454,13 @@ section .content {
     text-align: left;
     padding: 10px;
     height: 2em;
+    width: 10em;
 }
 
 .checker {
-    background: #d1d1d1 !important;
+    background: transparent !important;
 }
+/*d1d1d1*/
 
 .positive p {
     color: white;
@@ -622,4 +660,15 @@ section .content {
     .no-print, .no-print * {
         display: none !important;
     }
+}
+
+.loadpage {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0vh;
+    bottom: 0;
+    background: white;
 }

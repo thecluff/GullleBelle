@@ -510,7 +510,7 @@
                 $limit = 12;
                 $pages = count($chunked);
                 $page = $_GET['page'];
-                $radius = 3;
+                $radius = 2;
                 while ($pass <= $pages) {
                     if ($pages < $limit) {
                         if ($pass == $_GET['page']) {

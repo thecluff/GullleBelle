@@ -56,3 +56,24 @@ setInterval(function(){
         document.querySelector('.userinformation').style.opacity = "0.05";
     }
 }, 20000);
+
+down = 0;
+
+function rand(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+timeVal = rand(4000, 7000);
+
+setInterval(function(){
+    var downAdd = rand(0, 5);
+    down = down + downAdd;
+    document.querySelector('.loadpage').style.top = down + "vh";
+    if (down < 100) {
+        document.querySelector('body').style.overflow = "hidden";
+    } else {
+        document.querySelector('body').style.overflow = "auto";
+    }
+    timeVal = rand(4000, 7000);
+    console.log(timeVal);
+}, timeVal);
