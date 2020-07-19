@@ -74,7 +74,8 @@ CREATE TABLE `users` (
 (Change `DocumentRoot` to where you put your GullleBelle folder if needed).
 
 15. Retart 'MySQL' and 'Apache' in the XAMPP control panel.
-16. Go to www.gulllebelle.com (this link only works on your computer) and you're done!
+16. Go to www.gulllebelle.com (this link only works on your computer).
+Done!s
 ## How to use
 ### Sign up
 Click on `join us` on the website and fill in the form to sign up.
@@ -86,6 +87,11 @@ Creepy face will show up randomly in the website. To modify it, find the interva
 To remove it, open `/head.php` and delete `<div class="userinformation"></div>`.
 ### Painful load
 This can be toggled on/off by pressing `Ctrl` + `B`. The status will be displayed in the console.
+### Search_Spoof in three steps
+(Read the note at the bottom)
+1. Unzip `Searcg_Spoof.zip` and put it somewhere else (delete the original zip if necessary). 
+2. Go to <chrome://extensions/> and click on 'Load unpacked'. 
+3. Find the unzipped folder and press 'select folder'. Done
 
 ## Extra
 ### For other computers on the same network
@@ -98,3 +104,6 @@ This can be toggled on/off by pressing `Ctrl` + `B`. The status will be displaye
 (IPv4)       gulllebelle.com
 ```
 5. Done!
+
+## Note
+I did not create the chrome extension included in this repo. It was taken and modified from [bankboga](https://github.com/hadenpf/bankboga). Credit for the extension goes to the creator.
