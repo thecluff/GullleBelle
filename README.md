@@ -74,7 +74,7 @@ CREATE TABLE `users` (
 
 15. Retart 'MySQL' and 'Apache' in the XAMPP control panel.
 16. Go to www.gulllebelle.com (this link only works on your computer).
-Done!\
+17. Done!
 ## How to use
 ### Sign up
 Click on `join us` on the website and fill in the form to sign up.
@@ -91,7 +91,7 @@ Moved to [Painful_Load](https://github.com/lahrence/Painful-Load).
 1. Unzip `Searcg_Spoof.zip` and put it somewhere else (delete the original zip if necessary). 
 2. Go to <chrome://extensions/> and click on 'Load unpacked'. 
 3. Find the unzipped folder and press 'select folder'. 
-Done!\
+4. Done!
 (This works better with [Painful_Load](https://github.com/lahrence/Painful-Load))
 
 ## Extra
