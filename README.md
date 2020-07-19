@@ -88,11 +88,10 @@ To remove it, open `/head.php` and delete `<div class="userinformation"></div>`.
 Moved to [Painful_Load](https://github.com/lahrence/Painful-Load).
 ### Search_Spoof
 (Read the note at the bottom)
-1. Unzip `Searcg_Spoof.zip` and put it somewhere else (delete the original zip if necessary). 
+1. Unzip `Search_Spoof.zip` and put it somewhere else (delete the original zip if necessary). 
 2. Go to <chrome://extensions/> and click on 'Load unpacked'. 
 3. Find the unzipped folder and press 'select folder'. 
-4. Done!
-(This works better with [Painful_Load](https://github.com/lahrence/Painful-Load))
+4. Done! (This works better with [Painful_Load](https://github.com/lahrence/Painful-Load))
 
 ## Extra
 ### For other computers on the same network
