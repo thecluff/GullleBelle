@@ -20,14 +20,14 @@
         <source src="/assets/wav/distcort.wav" type="audio/wav">
     </audio>
     <div class="userinformation"></div>
-    <div id="loadpage"></div>
+    <!--<div id="loadpage"></div>-->
     <script src="/assets/js/main.js"></script>
     <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
         hotkeys('ctrl+a,ctrl+b,r,f', function (event, handler){
             switch (handler.key) {
                 case 'ctrl+b': changeCookie();
                 break;
             }
         });
-    </script>
+    </script>-->

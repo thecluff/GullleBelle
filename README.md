@@ -11,7 +11,6 @@ Please only use this for scambaiting or personal means that do not hurt anyone. 
 * Disabled inspect on account information page (still accessible through other pages)
 * Session inactivity timeout (15 minutes)
 * Recent activities
-* Painful loading time 😏
 * Creepy face show up from time to time
 
 ## Features to add
@@ -86,7 +85,7 @@ Recent activities can be edited by editing the json files corresponding with the
 Creepy face will show up randomly in the website. To modify it, find the interval function in `/assets/js/main.js`.
 To remove it, open `/head.php` and delete `<div class="userinformation"></div>`.
 ### Painful load
-This can be toggled on/off by pressing `Ctrl` + `B`. The status will be displayed in the console.
+Moved to [Painful_Load](https://github.com/lahrence/Painful-Load).
 ### Search_Spoof
 (Read the note at the bottom)
 1. Unzip `Searcg_Spoof.zip` and put it somewhere else (delete the original zip if necessary). 

@@ -86,7 +86,7 @@ function rand(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-timeVal = rand(4000, 7000);
+/*timeVal = rand(4000, 7000);
 
 if (typeof Cookies.get('loadpage') == 'undefined') {
     Cookies.set('loadpage', true);
@@ -138,4 +138,4 @@ setInterval(function(){
         document.getElementById('loadpage').style.display = "none";
         document.querySelector('body').style.overflowY = "auto";
     }
-}, timeVal);
+}, timeVal);*/

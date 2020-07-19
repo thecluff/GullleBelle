@@ -673,7 +673,7 @@ tr:last-child td:last-child {
         display: none !important;
     }
 }
-
+/*
 #loadpage {
     z-index: 100;
     position: fixed;
@@ -684,4 +684,4 @@ tr:last-child td:last-child {
     bottom: 0;
     background: white;
     display: block;
-}
+}*/
