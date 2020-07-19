@@ -87,7 +87,7 @@ Creepy face will show up randomly in the website. To modify it, find the interva
 To remove it, open `/head.php` and delete `<div class="userinformation"></div>`.
 ### Painful load
 This can be toggled on/off by pressing `Ctrl` + `B`. The status will be displayed in the console.
-### Search_Spoof in three steps
+### Search_Spoof
 (Read the note at the bottom)
 1. Unzip `Searcg_Spoof.zip` and put it somewhere else (delete the original zip if necessary). 
 2. Go to <chrome://extensions/> and click on 'Load unpacked'. 
