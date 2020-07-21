@@ -221,7 +221,7 @@ body {
 }
 
 .list ul li:hover {
-    background: #eee;
+    background: #fff;
     /*background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 31%, rgba(195,195,195,1) 100%);*/
 }
@@ -237,8 +237,20 @@ body {
 }
 
 .welcome {
-    margin-top: 15em;
+    position: absolute;
+    margin: 0;
+    margin-top: 13em;
+    left: 0;
+    right: 0;
     z-index: 1;
+    width: 100%;
+}
+
+.page {
+    margin-top: 25em;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 
 @supports (backdrop-filter: none) {
@@ -280,13 +292,13 @@ body {
     margin-right: 12.5%;
 }
 
-section {
+.section {
     position: relative;
     background: #eee;
-    left: -8px;
+    left: 0;
     margin: 0;
     top: 6em;
-    width: 102%;
+    width: 100%;
     color: #202020;
     font-family: 'Roboto', sans-serif;
 }
@@ -301,11 +313,7 @@ section {
     margin-right: 20% !important;
 }
 
-.about-content p, .other-content p{
-    text-indent: 50px;
-}
-
-section .content {
+.section .content {
     padding-left: 12.5%;
     padding-top: 4em;
     padding-right: 12.5%;
@@ -318,6 +326,7 @@ section .content {
     display: inline-block;
     margin: 100px;
     margin-top: 50px;
+    width: 15em;
 }
 
 .banks {
@@ -486,78 +495,6 @@ tr:last-child td:last-child {
     text-align: left;
 }
 
-#transfer-form {
-    position: absolute;
-    top: 10em;
-}
-
-.transer-text {
-    display: inline-block;
-}
-
-.transferform {
-    position: fixed;
-    top: 100px;
-    width: 100%;
-}
-
-.transferform h3 {
-    text-align: left;
-    display: inline-block;
-    font-family: 'Roboto', sans-serif;
-}
-
-.transferform h3 select {
-    display: block;
-    appearance:none;
-    width: 15em;
-    padding: 10px 5px;
-    border: none;
-    background: #eee;
-    border-radius: 8px;
-    margin: 10px 5px 0px 5px;
-}
-
-.transfer-div {
-    width: 100%;
-    text-align: center;
-}
-
-.transferform input {
-    display: block;
-    background: #eee;
-    width: 15em;
-    height: 1.25em;
-    padding: 10px 5px;
-    border: none;
-    background: #eee;
-    border-radius: 8px;
-    margin: 10px 5px 0px 5px;
-}
-
-.transferform button {
-    display: inline-block;
-    background-color: #402285;
-    border: none;
-    padding: 10px 12.5px;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.5s ease;
-    width: 25em;
-}
-
-.transferform button:hover {
-    background-color: #eee;
-    color: #202020;
-}
-
-.ins-funds {
-    color: firebrick;
-    font-family: 'Roboto', sans-serif;
-}
-
 .signupform p {
     margin-left: 12px;
 }
@@ -652,11 +589,9 @@ tr:last-child td:last-child {
 .showall {
     display: block;
     font-family: 'Roboto', sans-serif;
-    text-align: center !important;
+    text-align: left !important;
     color: #202020;
-    text-decoration: none;
     margin-top: 20px;
-    background: #eee;
     padding: 0.5em;
     margin: 10px 0px;
     border-radius: 10px;
@@ -664,7 +599,6 @@ tr:last-child td:last-child {
 }
 
 .showall:hover {
-    background: #202020;
     color: #eee;
 }
 
@@ -685,3 +619,75 @@ tr:last-child td:last-child {
     background: white;
     display: block;
 }*/
+
+.transfertable {
+    border: 1px solid transparent !important;
+}
+
+.transfertable input,select {
+    width: 100%;
+    border: 1px solid #eee;
+    background: #eee;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.transfertable input {
+    width: 90%;
+}
+
+.transfertable button {
+    border: 1px solid #402285;
+    background: #402285;
+    color: #eee;
+    cursor: pointer;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.transfertable button:hover {
+    border: 1px solid #eee;
+    background: #eee;
+    color: #202020;
+}
+
+.transfertable th {
+    border-bottom: 1px solid #eee !important;
+}
+
+.transfertable td {
+    width: 2em;
+    padding-left: 0;
+}
+
+.transfertable td a {
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.transfertable td div {
+    color: #eee;
+    display: block;
+    text-align: left;
+}
+
+.transfertable tr {
+    background: transparent;
+}
+
+.transfertable th {
+    text-align: left !important;
+    padding-left: 0;
+}
+
+.ins-funds {
+    color: firebrick;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+}
+
+.transferdiv {
+    
+}

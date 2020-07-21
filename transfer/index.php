@@ -24,9 +24,18 @@
     }
 ?>
 <div id="innerHere"></div>
-<div class="transfer-div">
+<div class="user-info">
+    <div class="userdis transferdiv">
     <form action="/includes/transfer.inc.php" method="post" class="transferform">
-        <h3>Transfer From
+        <table style="width:100%; margin-bottom: 100px;" class="transfertable">
+            <tr>
+                <th>Transfer From</th>
+                <th>Transfer to</th>
+                <th>Amount($)</th>
+            </tr>
+            <tr>
+                <td>
+                <div>
         <select name="outaccount">
             <option value="chckAcc" <?php 
             if (isset($_GET['transferfrom'])) {
@@ -70,25 +79,27 @@
                 echo '$'.number_format(abs($userSavingsBal), 2, '.', ',');
             ?>)
             </option>    
-        </select>
-        </h3>
-        <h3>Transfer To
-        <select name="inaccount">
-            <option value="chckAcc" <?php 
+                    </select></div></td>
+                <td>
+                    <div>
+        <?php
+            if (!isset($_GET['external']) || $_GET['external'] == 'false') {
+                echo '<select name="inaccount">';
+            echo '<option value="chckAcc"';
             if (isset($_GET['transferfrom'])) {
                 if ($_GET['transferfrom'] !== 'check') {
                     echo "selected='selected'";
                 }
             }
-            ?>><?php
+            echo '>';
                 echo '****'.$userCheckingN.' (';
                 if ($userCheckingBal < 0) {
                     echo '-';
                 }
                 echo '$'.number_format(abs($userCheckingBal), 2, '.', ',');
-            ?>)
-            </option>    
-            <option value="credits" <?php 
+            echo ')';
+            echo '</option>';
+            echo '<option value="credits"';
             if (isset($_GET['transferfrom'])) {
                 if ($_GET['transferfrom'] !== 'cred') {
                     if ($_GET['transferfrom'] !== 'sav') {
@@ -98,15 +109,15 @@
             } else {
                 echo "selected='selected'";
             }
-            ?>><?php
+            echo '>';
                 echo '****'.$userCreditsN.' (';
                 if ($userCreditsBal < 0) {
                     echo '-';
                 }
                 echo '$'.number_format(abs($userCreditsBal), 2, '.', ',');
-            ?>)
-            </option>    
-            <option value="savAcc" <?php 
+            echo ')';
+            echo '</option>';
+            echo '<option value="savAcc"';
             if (isset($_GET['transferfrom'])) {
                 if ($_GET['transferfrom'] !== 'sav') {
                     if ($_GET['transferfrom'] !== 'check') {
@@ -114,22 +125,58 @@
                     }
                 }
             }
-            ?>><?php
+            echo '>';
+                
                 echo '****'.$userSavingsN.' (';
                 if ($userSavingsBal < 0) {
                     echo '-';
                 }
                 echo '$'.number_format(abs($userSavingsBal), 2, '.', ',');
-            ?>)
-            </option>    
-        </select>
-        </h3>
-        <h3>Amount(limited to $5000)
-            <input name="amount" type="number" placeholder="amount" min="0.01" max="5000" required pattern="[0-9\.]+" value="0.01" step="0.01">
-        </h3>
-        <br>
-        <button type="submit" name="transfer-submit" id="transferbtn">Send</button>
-        <?php
+            echo ')';
+            echo'</option>';
+            echo '</select>';
+            } else if (($_GET['external']) == 'true') {
+                echo '<input name="inaccountExt" type="email" placeholder="External email" required>';
+            }
+            ?>
+                        
+                        
+                    </div>
+                        </td>
+                <td>
+                    <div>
+                    <input name="amount" type="number" placeholder="amount" min="0.01" max="5000" required pattern="[0-9\.]+" value="0.01" step="0.01">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><!--<div>
+                    <?php
+                    /*if (isset($_GET['external'])) {
+                    if (($_GET['external']) == 'true') {
+                        echo '<a href="/transfer/index.php?external=false">';
+                        echo 'Transfer between personal accounts';
+                        echo '</a>';
+                    } else {
+                        echo '<a href="/transfer/index.php?external=true">';
+                        echo 'Add external account';
+                        echo '</a>';
+                    }
+                    } else {
+                        echo '<a href="/transfer/index.php?external=true">';
+                        echo 'Add external account';
+                        echo '</a>';
+                    }*/
+                    ?></div>--></td>
+                <td>
+                    <?php
+                    if (isset($_GET['external'])) {
+                    if (($_GET['external']) == 'true') {
+                        echo '<input name="inaccountExtAcc" type="text" placeholder="Account type" required>';
+                    }
+                    }
+                    ?>
+                    <?php
         if (isset($_GET['error'])) {
             if ($_GET['error'] == "insufficientfunds") {
                 echo "<p class='ins-funds'>Insufficient Funds</p>";
@@ -138,10 +185,28 @@
             } else if ($_GET['error'] == "limitreached") {
                 echo "<p class='ins-funds'>You have exceeded the limit</p>";
             }
-        }
-        ?>
+        }?>
+                </td>
+                <td><div><button type="submit" name="transfer-submit" id="transferbtn">Send</button></div></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td> <?php
+        /*if (isset($_GET['error'])) {
+            if ($_GET['error'] == "insufficientfunds") {
+                echo "<p class='ins-funds'>Insufficient Funds</p>";
+            } else if ($_GET['error'] == "invalidaccounts") {
+                echo "<p class='ins-funds'>Cannot use the same accounts</p>";
+            } else if ($_GET['error'] == "limitreached") {
+                echo "<p class='ins-funds'>You have exceeded the limit</p>";
+            }
+        }*/?></td>
+                <td></td>
+            </tr>
+        </table>
     </form>
-</div>
+    </div>
+</div> 
         <?php
             require '../footer.php';
-        ?>
+        ?> 
