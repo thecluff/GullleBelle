@@ -94,7 +94,7 @@ Moved to [Painful_Load](https://github.com/lahrence/Painful-Load).
 4. Done! (This works better with [Painful_Load](https://github.com/lahrence/Painful-Load))
 ### Updating the files
 Delete the website files from your htdocs folder. 
-DO NOT DELETE YOUR DATABASE
+**DO NOT DELETE YOUR DATABASE.**
 Follow steps 2, 4-5 from the installation guide again.
 
 ## Extra
