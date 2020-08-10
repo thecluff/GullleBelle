@@ -686,8 +686,9 @@ tr:last-child td:last-child {
     color: firebrick;
     font-family: 'Roboto', sans-serif;
     text-align: left;
+    margin-bottom: -2em;
 }
 
-.transferdiv {
-    
+select {
+    cursor: pointer;
 }

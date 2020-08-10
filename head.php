@@ -4,7 +4,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Gull le Belle</title>
+        <title><?php
+            if (substr_count($_SERVER['REQUEST_URI'], '/') >= 2) {
+                $url = ucwords(str_replace("/", " ", $_SERVER['REQUEST_URI']));
+                $str = explode('Index', $url);
+                $url = $str[0];
+                echo $url;
+            } else {
+                echo 'Gull le Belle';
+            }
+        ?></title>
         <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
         <link rel="icon" href="/assets/png/Logo.png" type="image/png">
         <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>

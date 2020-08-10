@@ -99,7 +99,7 @@
         </div>
         <div class="affiliated-banks section" id="banks">
             <div class="affiliated-content content">
-                <h1>Some of our affilliated banks</h1>
+                <h1>Some of Our Affilliated Banks</h1>
                 <div class="banks"><h2>X Æ A-12</h2><img src="/assets/png/XEALogo.png" height="100px"></div>
                 <div class="banks"><h2>Scotiabutt</h2><img src="/assets/png/ScotiabuttLogo.png" height="100px"></div>
                 <div class="banks"><h2>Flockbank</h2><img src="/assets/png/FlockLogo.png" height="100px"></div>

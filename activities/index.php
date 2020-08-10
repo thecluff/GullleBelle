@@ -36,14 +36,14 @@
     if (isset($_GET['page'])) {
         $page = $_GET['page'] - 1;
     } else {
-        header("Location: ../activities?page=1");
+        header("Location: ../activities/index.php?page=1");
         exit();
     }
     if ($_GET['page'] <= 0) {
-        header("Location: ../activities?page=1");
+        header("Location: ../activities/index.php?page=1");
         exit();
     } else if (count($chunked) < $_GET['page']) {
-        header("Location: ../activities?page=".count($chunked));
+        header("Location: ../activities/index.php?page=".count($chunked));
         exit();
     }
 ?>

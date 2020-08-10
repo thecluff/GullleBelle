@@ -23,7 +23,7 @@
                                 <div class="modal-content">
                                     <h1>Online Banking</h1>
                                         <form action="/includes/login.inc.php" method="post">
-                                            <input type="login" name="mailuid" id="login" placeholder="username" value='.$mailuidL.'>
+                                            <input type="text" name="mailuid" id="login username" placeholder="username" value='.$mailuidL.'>
                                             <input type="password" name="pwd" id="password" placeholder="password">
                                             <div class="reveal" onclick="reveal()">
                                                 <img src="/assets/png/visibility-black-18dp/1x/outline_visibility_black_18dp.png" class="material-icons" id="reveal-icon">
