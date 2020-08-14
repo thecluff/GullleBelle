@@ -84,9 +84,6 @@ Click on `join us` on the website and fill in the form to sign up.
 The default values will be given to each account.
 ### Transaction history
 Recent activities can be edited by editing the json files corresponding with the username in `/assets/users/`.
-### Creepy face
-Creepy face will show up randomly in the website. To modify it, find the interval function in `/assets/js/main.js`.
-To remove it, open `/head.php` and delete `<div class="userinformation"></div>`.
 ### Painful load
 Moved to [Painful_Load](https://github.com/lahrence/Painful-Load).
 ### Search_Spoof
