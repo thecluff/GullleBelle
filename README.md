@@ -61,7 +61,6 @@ CREATE TABLE `users` (
 12. Add this text to the end of it and save. 
 ```
 127.0.0.1       www.gulllebelle.com
-127.0.0.1       gulllebelle.com
 ```
 13. Go to your xampp folder and navigate to `\apache\conf\extra` and open `httpd-vhosts.conf`.
 14. Add this text to the end of it and save.
@@ -70,14 +69,6 @@ CREATE TABLE `users` (
     ServerAdmin webmaster@gulllebelle
     DocumentRoot "C:/xampp/htdocs/gulllebelle"
     ServerName www.gulllebelle.com
-    ErrorLog "logs/dummy-host2.example.com-error.log"
-    CustomLog "logs/dummy-host2.example.com-access.log" common
-</VirtualHost>
-
-<VirtualHost *:80>
-    ServerAdmin webmaster@gulllebelle
-    DocumentRoot "C:/xampp/htdocs/gulllebelle"
-    ServerName gulllebelle.com
     ErrorLog "logs/dummy-host2.example.com-error.log"
     CustomLog "logs/dummy-host2.example.com-access.log" common
 </VirtualHost>
@@ -117,7 +108,6 @@ Follow steps 2, 4-5 from the installation guide again.
 4. Add this text to the end of it replacing `(IPv4)` with the IPv4 address you took from the host.
 ```
 (IPv4)       www.gulllebelle.com
-(IPv4)       gulllebelle.com
 ```
 5. Done!
 
