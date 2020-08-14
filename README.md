@@ -18,7 +18,16 @@ Please only use this for scambaiting or personal means that do not hurt anyone. 
 * Any other features I can think of
 
 ## Screenshots
+### Home page
+![image](assets/png/Screenshot.3.png)
+### Logged in home page
 ![image](assets/png/Screenshot.1.png)
+### Account page
+![image](assets/png/Screenshot.2.png)
+### Transfer page
+![image](assets/png/Screenshot.4.png)
+### Activities page
+![image](assets/png/Screenshot.5.png)
 
 ## How to setup
 ### This instruction is for windows users, although the steps are mostly the same.
