@@ -17,6 +17,9 @@ Please only use this for scambaiting or personal means that do not hurt anyone. 
 * External account transfer
 * Any other features I can think of
 
+## Screenshots
+![image](assets/png/Screenshot.1.png)
+
 ## How to setup
 ### This instruction is for windows users, although the steps are mostly the same.
 1. Install [XAMPP](https://www.apachefriends.org/index.html).

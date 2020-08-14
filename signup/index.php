@@ -138,7 +138,7 @@
             } else if ($_GET['error'] == "passwordcheck") {
                 echo '<p class="ins-funds">Passwords do not match</p>';
             } else if ($_GET['error'] == "weakpass") {
-                echo '<p class="ins-funds">Password is too weak</p>';
+                echo '<p class="ins-funds">Password is too weak, use symbols, and uppercase, lowercase letters</p>';
             } else if ($_GET['error'] == "passlength") {
                 echo '<p class="ins-funds">Password is too short (enter at least 6 characters)</p>';
             }
