@@ -1,1 +1,2 @@
 This file is here to keep the folder
+Deleting this file is unnecessary but recommended.
