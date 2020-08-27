@@ -93,7 +93,7 @@ Moved to [Painful_Load](https://github.com/lahrence/Painful-Load).
 3. Find the unzipped folder and press 'select folder'. 
 4. Done! (This works better with [Painful_Load](https://github.com/lahrence/Painful-Load))
 ### Updating the files
-Backup the `users` jsons in the assets folder. 
+Backup the `users` jsons in the assets folder.  
 Delete the website files from your htdocs folder.  
 **DO NOT DELETE YOUR DATABASE.**  
 Follow steps 2, 4-5 from the installation guide again.
