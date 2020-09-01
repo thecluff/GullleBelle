@@ -75,7 +75,7 @@ CREATE TABLE `users` (
 ````  
 (Change `DocumentRoot` to where you put your GullleBelle folder if needed).
 
-15. Retart 'MySQL' and 'Apache' in the XAMPP control panel.
+15. Restart 'MySQL' and 'Apache' in the XAMPP control panel.
 16. Go to www.gulllebelle.com (this link only works on your computer).
 17. Done!
 ## How to use
@@ -83,7 +83,7 @@ CREATE TABLE `users` (
 Click on `join us` on the website and fill in the form to sign up.
 The default values will be given to each account.
 ### Transaction history
-Recent activities can be edited by editing the json files corresponding with the username in `/assets/users/`.
+Recent activities can be edited by editing the JSON files corresponding with the username in `/assets/users/`.
 ### Painful load
 Moved to [Painful_Load](https://github.com/lahrence/Painful-Load).
 ### Search_Spoof
@@ -93,10 +93,12 @@ Moved to [Painful_Load](https://github.com/lahrence/Painful-Load).
 3. Find the unzipped folder and press 'select folder'. 
 4. Done! (This works better with [Painful_Load](https://github.com/lahrence/Painful-Load))
 ### Updating the files
-Backup the `users` jsons from the assets folder.  
-Delete the website files from your htdocs folder.  
+1. Backup the `users` JSONs from the assets folder (move to another location).  
+2. Delete all the website files from your htdocs folder.  
 **DO NOT DELETE YOUR DATABASE.**  
-Follow steps 2, 4-5 from the installation guide again.
+4. Download [GullleBelle-master.zip](https://github.com/lahrence/GullleBelle/archive/master.zip).
+5. Unzip the `GullleBelle-master.zip` and drag the folder into the htdocs folder.
+6. Rename the folder to `GullleBelle` instead of `GullleBelle-master`.
 
 
 ## Extra
@@ -109,6 +111,10 @@ Follow steps 2, 4-5 from the installation guide again.
 (IPv4)       www.gulllebelle.com
 ```
 5. Done!
+
+## Experimental Features and Details
+* When enabled (by going into 'setup.json' and changing `downloadButton` to true), users can have a custom button that, when clicked, downloads a file of their choosing.
+* setup.json is a new JSON file used to enable/disable editable features (very short list at the moment).
 
 ## Note
 I did not create the chrome extension included in this repo. It was taken and modified from [bankboga](https://github.com/hadenpf/bankboga). Credit for the extension goes to the creator.

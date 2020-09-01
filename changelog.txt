@@ -1,0 +1,7 @@
+Gull-le-Belle 1.0.0
+    - added setup.json to store settings
+    - added ability to download custom files
+    - added error 404 page
+    - updated css style
+    (This version's changelog is short and may not reflect actual changes)
+#2020/8/10# PDT

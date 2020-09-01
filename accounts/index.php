@@ -1,23 +1,14 @@
 <?php
     $root = realpath($_SERVER["DOCUMENT_ROOT"]);
     require $root.'/includes/dbh.inc.php';
-    /*
-        $_SESSION['userCheckingBal'] = $row['chckAcc'];
-        $_SESSION['userSavingsBal'] = $row['savAcc'];
-        $_SESSION['userCreditsBal'] = $row['credits'];
-        $_SESSION['userCheckingN'] = $row['chckNum'];
-        $_SESSION['userSavingsN'] = $row['savNum'];
-        $_SESSION['userCreditsN'] = $row['credNum'];*/
     require $root.'/head.php';
     require $root.'/navbar.php';
     require $root.'/includes/variables.php';
     require $root.'/includes/inactivity.php';
-    if (isset($_SESSION['userId'])) {
-        
-    } else {
+    if (!isset($_SESSION['userId'])) {
         header("Location: ../");
         exit();
-    }
+    } 
     
     if (isset($_SESSION['userId'])) {
         echo '
@@ -32,10 +23,17 @@
     $json = trim(file_get_contents("../assets/users/".$_SESSION['userUid'].".json"), "\xEF\xBB\xBF");
     $arr = json_decode($json, true);
     $accountInfo = array_reverse($arr);
+    
+    $json = trim(file_get_contents("../setup.json"), "\xEF\xBB\xBF");
+    $settings = json_decode($json, true);
 ?>
     <body>
-        <div id="innerHere"></div>
-        <div class="overlay"></div>
+        <?php
+            if ($settings["overlay"] == true) {
+                echo '<div class="overlay"></div>';
+            }
+        ?>
+        <div class="innerHere">
         <div class="user-info">
             <div class="userdis">
             <h3>Accounts</h3>
@@ -274,8 +272,18 @@
                     ?></p></td>
                 </tr>
             </table>
-            <p class="load" style="margin-bottom: 100px;"><a href="/activities/">Load More</a></p>
-                </div>
+            <div class="after-content">
+                    <?php
+                        if ($settings["downloadButton"] == true) {
+                            echo '<a class="download" href="';
+                            echo $settings["downloadFileLink"];
+                            echo '" target="_blank" download>';
+                            echo $settings["downloadButtonText"];
+                            echo '</a>';
+                        }
+                    ?>
+                <p class="load" style="margin-bottom: 100px;"><a href="/activities/">Load More</a></p>
+            </div>
         </div>
         <?php
             require '../footer.php';

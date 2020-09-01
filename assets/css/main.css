@@ -487,12 +487,37 @@ tr:last-child td:last-child {
     border-radius: 8px;
 }
 
+.after-content {
+    display: block;
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+}
+
 .load {
     color: #0000EE;
     text-decoration: underline;
-    font-family: 'Roboto', sans-serif;
+}
+
+.load, .download {
+    display: inline;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 8px;
     cursor: pointer;
-    text-align: left;
+}
+
+.download {
+    background: #eee;
+    text-decoration: none;
+    color: #202020;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.download:hover {
+    background: #202020;
+    text-decoration: none;
+    color: #eee;
 }
 
 .signupform p {

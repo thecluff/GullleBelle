@@ -27,7 +27,6 @@
     </head>
     <script src="/assets/js/main.js"></script>
     <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
-    <!--<div class="userinformation"></div>-->
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
