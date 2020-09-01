@@ -78,7 +78,16 @@ CREATE TABLE `users` (
 15. Restart 'MySQL' and 'Apache' in the XAMPP control panel.
 16. Go to www.gulllebelle.com (this link only works on your computer).
 17. Done!
+
+## Updating
+1. Backup the `users` JSONs from the assets folder (move to another location).  
+2. Delete all the website files from your htdocs folder.  
+**DO NOT DELETE YOUR DATABASE.**  
+4. Download [GullleBelle-master.zip](https://github.com/lahrence/GullleBelle/archive/master.zip).
+5. Unzip the `GullleBelle-master.zip` and drag the folder into the htdocs folder.
+6. Rename the folder to `GullleBelle` instead of `GullleBelle-master`.
 ## How to use
+
 ### Sign up
 Click on `join us` on the website and fill in the form to sign up.
 The default values will be given to each account.
@@ -92,14 +101,6 @@ Moved to [Painful_Load](https://github.com/lahrence/Painful-Load).
 2. Go to <chrome://extensions/> and click on 'Load unpacked'. 
 3. Find the unzipped folder and press 'select folder'. 
 4. Done! (This works better with [Painful_Load](https://github.com/lahrence/Painful-Load))
-### Updating the files
-1. Backup the `users` JSONs from the assets folder (move to another location).  
-2. Delete all the website files from your htdocs folder.  
-**DO NOT DELETE YOUR DATABASE.**  
-4. Download [GullleBelle-master.zip](https://github.com/lahrence/GullleBelle/archive/master.zip).
-5. Unzip the `GullleBelle-master.zip` and drag the folder into the htdocs folder.
-6. Rename the folder to `GullleBelle` instead of `GullleBelle-master`.
-
 
 ## Extra
 ### For other computers on the same network
